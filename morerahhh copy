@@ -1,0 +1,4363 @@
+
+local function startUI()
+if _G.what == true then 
+    if game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD") then
+    if game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("PerksButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("main") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("ui1") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("ui2") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("SpawnItemsButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("MiscButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("ui3") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("ui4") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("ui5") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("ui6") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("AbilitiesButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("StatsButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("CharactersButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("TeleportsButton") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("Extra1Button") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD").TabMenu.bg:FindFirstChild("Extra2Button") then
+    
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("main"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui1"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui2"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("PerksButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("SoundsButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui3"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui4"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui5"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui6"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("MiscButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("SpawnItemsButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("StatsButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("AbilitiesButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui7"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui10"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui9"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("ui8"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("Extra1Button"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("Extra2Button"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("CharactersButton"):Destroy()
+        game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg:FindFirstChild("TeleportsButton"):Destroy()
+        end
+    end
+end
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("mainHUD") then
+    _G.what = true
+    local autoparryact = false
+    local ui = Instance.new("ScrollingFrame", game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg)
+    ui.Name = "main"
+    ui.Visible = false
+    ui.Size = UDim2.new(0.45, 0, 0.5, 0)
+    ui.Position = UDim2.new(0.065, 0, 0.25, 0)
+    ui.Parent.ammodroptab.Position = UDim2.new(0.065, 0, 0.25, 0)
+    ui.Parent.scraptab.Position = UDim2.new(0.065, 0, 0.25, 0)
+    ui.Parent.weaponinfotab.Position = UDim2.new(0.065, 0, 0.25, 0)
+    ui.Parent.rationstab.Position = UDim2.new(0.065, 0, 0.25, 0)
+    ui.Parent.ammodroptab.AnchorPoint = Vector2.new(0,0)
+    ui.Parent.scraptab.AnchorPoint = Vector2.new(0,0)
+    ui.Parent.weaponinfotab.AnchorPoint = Vector2.new(0,0)
+    ui.Parent.rationstab.AnchorPoint = Vector2.new(0,0)
+    ui.Parent.map.player_icon.ImageTransparency = 1
+    ui.Parent.map.player_icon.spinicon.ImageTransparency = 1
+    ui.BackgroundTransparency = 1
+    ui.AnchorPoint = Vector2.new(0,0)
+    ui.ScrollingDirection = "Y"
+    ui.CanvasSize = UDim2.new(0, 0, 10, 0)
+    local ui1 = ui:Clone()
+    ui1.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui1.Name = "ui1"
+    local ui5 = ui:Clone()
+    ui5.Name = "ui5"
+    ui5.Parent = ui.Parent
+    local ui6 = ui:Clone()
+    ui6.Name = "ui6"
+    ui6.Parent = ui.Parent
+    local ui7 = ui:Clone()
+    ui7.Name = "ui7"
+    ui7.Parent = ui.Parent
+    local ui8 = ui:Clone()
+    ui8.Name = "ui8"
+    ui8.Parent = ui.Parent
+    local ui9 = ui:Clone()
+    ui9.Name = "ui9"
+    ui9.Parent = ui.Parent
+    local ui10 = ui:Clone()
+    ui10.Name = "ui10"
+    ui10.Parent = ui.Parent
+    ui.Parent.map.ImageTransparency = 1
+    ui.Parent.map.maptext.Text = ""
+    local ui1b = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rationstab.Beans.eat:Clone()
+    ui1b.Size = UDim2.new(0.2, 0, 0.01, 0)
+    ui1b.TextScaled = true
+    local ui1b1 = ui1b:Clone()
+    ui1b1.Parent = ui1
+    ui1b1.Position = UDim2.new(0, 0, 0, 0)
+    ui1b1.Text = "Godly Drifter"
+    local function ui1b1func()
+    local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["drift"].basestats
+    local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["drift"]
+    if perks then
+        perk.name = "Godly Drifter"
+        perk.desc = "huh"
+        perk.pros = { "Everything"}
+        perk.cons = { "None"}
+       perk.activename = "What do I even put here lol - Argent"
+       perk.activedetails = "Special Perk"
+       perk.icon = "www.rbxassetid://7590913205"
+        perks.atkmod = 2500
+        perks.defmod = 2500
+        perks.stammod = 99900
+        perks.shovemod = 120
+        perks.lightatkspeed = 145
+         perks.heavyatkspeed = 175
+         perks.recoilmod = 10000000
+         perks.accmod = 250
+         perks.reloadmod = 155 
+         perks.noaimmod = false 
+         perks.scavmod = 10
+         perks.mvtmod = 50 
+         perks.cripple_immune =  true
+         perks.exhaust_immune = true 
+         perks.burnimmune = true 
+         perks.nomorale = true
+         perks.backpack = true
+         perks.falldamagemod = false
+         perks.grap = false 
+         perks.bleed_immune = true
+         perk.activestats.cooldown = 1
+         perk.activestats.drift_duration = math.huge
+         perk.activestats.drift_project_range = 100
+         perk.activestats.alt_swing_charge = 5
+         perk.activestats.swing_range = 15
+    workspace.ServerStuff.changeStats:InvokeServer("changeclass", "drift")
+    end
+    end
+    ui1b1.MouseButton1Down:Connect(ui1b1func)
+    
+    local ui1b2 = ui1b:Clone()
+    ui1b2.Parent = ui1
+    ui1b2.Position = UDim2.new(0.225, 0, 0, 0)
+    ui1b2.Text = "Godly Survivalist"
+    local function ui1b2func()
+    local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["survival"].basestats
+    local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["survival"]
+    if perks then
+        perk.name = "Godly Survivalist"
+        perk.desc = "huh"
+        perk.pros = { "Everything"}
+        perk.cons = { "None"}
+       perk.activename = "What do I even put here lol - Argent"
+       perk.activedetails = "Special Perk"
+       perk.icon = "www.rbxassetid://7590913205"
+        perks.atkmod = 2500
+        perks.defmod = 2500
+        perks.stammod = 99900
+        perks.shovemod = 120
+        perks.lightatkspeed = 145
+         perks.heavyatkspeed = 175
+         perks.recoilmod = 0
+         perks.accmod = 250
+         perks.reloadmod = 155 
+         perks.noaimmod = false 
+         perks.scavmod = 10
+         perks.mvtmod = 50 
+         perks.cripple_immune =  true
+    perks.fracture_immune = true
+         perks.exhaust_immune = true 
+         perks.burnimmune = true 
+         perks.nomorale = true
+         perks.backpack = true
+         perks.falldamagemod = false
+         perks.grap = false 
+    perks.bleed_immune = true
+    workspace.ServerStuff.changeStats:InvokeServer("changeclass", "survival")
+    end
+    end
+    ui1b2.MouseButton1Down:Connect(ui1b2func)
+    
+    local ui1b3 = ui1b:Clone()
+    ui1b3.Parent = ui1
+    ui1b3.Position = UDim2.new(0.450, 0, 0, 0)
+    ui1b3.Text = "Godly Arbiter"
+    local function ui1b3func()
+    local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
+    local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
+    if perks then
+        perk.name = "Godly Survivalist"
+        perk.desc = "huh"
+        perk.pros = { "Everything"}
+        perk.cons = { "None"}
+       perk.activename = "What do I even put here lol - Argent"
+       perk.activedetails = "Special Perk"
+       perk.icon = "www.rbxassetid://7590913205"
+        perks.atkmod = 2500
+        perks.defmod = 2500
+        perks.stammod = 99900
+        perks.shovemod = 120
+        perks.lightatkspeed = 145
+         perks.heavyatkspeed = 175
+         perks.recoilmod = 0
+         perks.accmod = 250
+         perks.reloadmod = 155 
+         perks.noaimmod = false 
+         perks.scavmod = 10
+         perks.mvtmod = 50 
+         perks.cripple_immune =  true
+         perks.exhaust_immune = true 
+         perks.burnimmune = true 
+         perks.nomorale = true
+         perks.backpack = true
+         perks.falldamagemod = false
+         perks.grap = false 
+         perks.bleed_immune = true
+         perk.activestats.blast_damage = 300
+         perk.activestats.blast_forward = 200 --How far the normal shot can go
+        perk.activestats.blast_knockback = 40 --Knockback, can send you flying if you are on air
+        perk.activestats.blast_punch_window = 0.3 --Default is 0.1, will also delay the normal shot if you miss the long one
+        perk.activestats.blast_punch_range = 500 --How far can your long shot go
+        perk.activestats.cooldown = 0.1
+    workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shotgun")
+    end
+    end
+    ui1b3.MouseButton1Down:Connect(ui1b3func)
+    
+    local ui1b4 = ui1b:Clone()
+    ui1b4.Parent = ui1
+    ui1b4.Position = UDim2.new(0.675, 0, 0, 0)
+    ui1b4.Text = "Godly Lazarus"
+    local function ui1b4func()
+    local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["lazarus"].basestats
+    local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["lazarus"]
+    if perks then
+        perk.name = "Godly Lazarus"
+        perk.desc = "huh"
+        perk.pros = { "Everything"}
+        perk.cons = { "None"}
+       perk.activename = "What do I even put here lol - Argent"
+       perk.activedetails = "Special Perk"
+       perk.icon = "www.rbxassetid://7590913205"
+        perks.atkmod = 2500
+        perks.defmod = 2500
+        perks.stammod = 99900
+        perks.shovemod = 120
+        perks.lightatkspeed = 145
+         perks.heavyatkspeed = 175
+         perks.recoilmod = 0
+         perks.accmod = 250
+         perks.reloadmod = 155 
+         perks.noaimmod = false 
+         perks.scavmod = 10
+         perks.mvtmod = 50 
+         perks.cripple_immune =  true
+         perks.exhaust_immune = true 
+         perks.burnimmune = true 
+         perks.nomorale = true
+         perks.backpack = true
+         perks.falldamagemod = false
+         perks.grap = false 
+         perks.drop_ranged = false
+        perk["activestats"].cooldown = 1
+        perk["activestats"].bolt_radius = 75
+        perk["activestats"].lazarus_max_heal = 20
+        perk["activestats"].minheal = 55
+        perk["activestats"].lazarus_shoot_range = 500
+        perk["activestats"].enemy_slow_duration = 20
+        perk["activestats"].multicooldown = 0.001
+    workspace.ServerStuff.changeStats:InvokeServer("changeclass", "lazarus")
+    end
+    end
+    ui1b4.MouseButton1Down:Connect(ui1b4func)
+    
+    local ui1b5 = ui1b:Clone()
+    ui1b5.Parent = ui1
+    ui1b5.Position = UDim2.new(0, 0, 0.015, 0)
+    ui1b5.Text = "Godly Berserker"
+    local function ui1b5func()
+    local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["berz"].basestats
+    local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["berz"]
+    if perks then
+        perk.name = "Godly Berserker"
+        perk.desc = "huh"
+        perk.pros = { "Everything"}
+        perk.cons = { "None"}
+       perk.activename = "What do I even put here lol - Argent"
+       perk.activedetails = "Special Perk"
+       perk.icon = "www.rbxassetid://7590913205"
+        perks.atkmod = 2500
+        perks.defmod = 2500
+        perks.stammod = 99900
+        perks.shovemod = 120
+        perks.lightatkspeed = 145
+         perks.heavyatkspeed = 175
+         perks.recoilmod = 0
+         perks.accmod = 250
+         perks.reloadmod = 155 
+         perks.noaimmod = false 
+         perks.scavmod = 10
+         perks.mvtmod = 50 
+         perks.cripple_immune =  true
+         perks.exhaust_immune = true 
+         perks.burnimmune = true 
+         perks.nomorale = true
+         perks.backpack = true
+         perks.falldamagemod = false
+         perks.grap = false 
+         perks.bleed_immune = true
+    perk.activestats.regenonparry = 20
+    perk.activestats.regenonkill = 30
+    perk.activestats.sppeedboost = 30
+    perk.activestats.cooldown = 0.1
+    perk.activestats.duration = 15
+    workspace.ServerStuff.changeStats:InvokeServer("changeclass", "berz")
+    end
+    end
+    ui1b5.MouseButton1Down:Connect(ui1b5func)
+    
+    local ui1b0 = ui1b:Clone()
+    ui1b0.Parent = ui1
+    ui1b0.Position = UDim2.new(0.225, 0, 0.015, 0)
+    ui1b0.Text = "Godly Sickler (Arbiter)"
+    local function ui1b0func()
+        local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
+        local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
+        if perks then
+            perk.name = "Godly Sickler"
+            perk.desc = "KILL THEM ALL"
+            perk.pros = { "RAGE"}
+            perk.cons = { "None"}
+           perk.activename = "This thing wipes out squads. - Argent"
+           perk.activedetails = "DEADLY Perk"
+           perk.icon = "www.rbxassetid://7590913205"
+            perks.atkmod = 2500
+            perks.defmod = 2500
+            perks.stammod = 99900
+            perks.shovemod = 120
+            perks.lightatkspeed = 300
+             perks.heavyatkspeed = 400
+             perks.recoilmod = 100000
+             perks.accmod = 250
+             perks.reloadmod = 500
+             perks.noaimmod = false 
+             perks.scavmod = 100
+             perks.mvtmod = 200
+             perks.cripple_immune =  true
+             perks.exhaust_immune = true 
+             perks.burnimmune = true 
+             perks.nomorale = true
+             perks.backpack = true
+             perks.falldamagemod = false
+             perks.grap = false 
+             perks.bleed_immune = true
+             perk.activestats.blast_damage = 300
+             perk.activestats.blast_forward = 200 --How far the normal shot can go
+            perk.activestats.blast_knockback = 40 --Knockback, can send you flying if you are on air
+            perk.activestats.blast_punch_window = 0.3 --Default is 0.1, will also delay the normal shot if you miss the long one
+            perk.activestats.blast_punch_range = 500 --How far can your long shot go
+            perk.activestats.cooldown = 1
+            workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shotgun")
+        end
+    end
+    ui1b0.MouseButton1Down:Connect(ui1b0func)
+
+    local ui2 = ui:Clone()
+    ui2.Name = "ui2"
+    ui2.Parent = ui.Parent
+    local ui1b6 = ui1b:Clone()
+    ui1b6.Parent = ui2
+    ui1b6.Position = UDim2.new(0, 0, 0.015, 0)
+    ui1b6.Text = "ERU Holdout Song"
+    local function ui1b6func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "rhyer",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    end
+    ui1b6.MouseButton1Down:Connect(ui1b6func)
+    local ui1b7 = ui1b:Clone()
+    ui1b7.Parent = ui2
+    ui1b7.Position = UDim2.new(0.225, 0, 0.015, 0)
+    ui1b7.Text = "Medieval Holdout Song"
+    local function ui1b7func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "medieval",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b7.MouseButton1Down:Connect(ui1b7func)
+    local ui1b8 = ui1b:Clone()
+    ui1b8.Parent = ui2
+    ui1b8.Position = UDim2.new(0.450, 0, 0.015, 0)
+    ui1b8.Text = "SQ Holdout Song"
+    local function ui1b8func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "sledge",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b8.MouseButton1Down:Connect(ui1b8func)
+    local ui1b9 = ui1b:Clone()
+    ui1b9.Parent = ui2
+    ui1b9.Position = UDim2.new(0.675, 0, 0.015, 0)
+    ui1b9.Text = "Ulayclon Holdout Song"
+    local function ui1b9func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "zealot",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b9.MouseButton1Down:Connect(ui1b9func)
+    local ui1b10 = ui1b:Clone()
+    ui1b10.Parent = ui2
+    ui1b10.Position = UDim2.new(0, 0, 0.03, 0)
+    ui1b10.Text = "Sickler Holdout Song"
+    local function ui1b10func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "sickler",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b10.MouseButton1Down:Connect(ui1b10func)
+    local ui1b11 = ui1b:Clone()
+    ui1b11.Parent = ui2
+    ui1b11.Position = UDim2.new(0.225, 0, 0.03, 0)
+    ui1b11.Text = "Breaking bad Holdout Song"
+    local function ui1b11func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "bad",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b11.MouseButton1Down:Connect(ui1b11func)
+    local ui1b12 = ui1b:Clone()
+    ui1b12.Parent = ui2
+    ui1b12.Position = UDim2.new(0.450, 0, 0.03, 0)
+    ui1b12.Text = "Yosef Holdout Song"
+    local function ui1b12func()
+        local args = {
+            [1] = {
+                [1] = "songs",
+                [2] = "holdout_bosses"
+            },
+            [2] = "yosef",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b12.MouseButton1Down:Connect(ui1b12func)
+    local ui1b13 = ui1b:Clone()
+    ui1b13.Parent = ui2
+    ui1b13.Position = UDim2.new(0.675, 0, 0.03, 0)
+    ui1b13.Text = "ERU Ship Sound"
+    local function ui1b13func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "rhyer",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b13.MouseButton1Down:Connect(ui1b13func)
+    local ui1b14 = ui1b:Clone()
+    ui1b14.Parent = ui2
+    ui1b14.Position = UDim2.new(0, 0, 0.045, 0)
+    ui1b14.Text = "Medieval Horn"
+    local function ui1b14func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "medieval",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b14.MouseButton1Down:Connect(ui1b14func)
+    local ui1b15 = ui1b:Clone()
+    ui1b15.Parent = ui2
+    ui1b15.Position = UDim2.new(0.225, 0, 0.045, 0)
+    ui1b15.Text = "SQ Metal Scrape"
+    local function ui1b15func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "sledge",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b15.MouseButton1Down:Connect(ui1b15func)
+    local ui1b16 = ui1b:Clone()
+    ui1b16.Parent = ui2
+    ui1b16.Position = UDim2.new(0.450, 0, 0.045, 0)
+    ui1b16.Text = "Ulayclon Radio"
+    local function ui1b16func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "zealot",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b16.MouseButton1Down:Connect(ui1b16func)
+    local ui1b17 = ui1b:Clone()
+    ui1b17.Parent = ui2
+    ui1b17.Position = UDim2.new(0.675, 0, 0.045, 0)
+    ui1b17.Text = "Sickler Wake-up"
+    local function ui1b17func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "sickler",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b17.MouseButton1Down:Connect(ui1b17func)
+    local ui1b18 = ui1b:Clone()
+    ui1b18.Parent = ui2
+    ui1b18.Position = UDim2.new(0, 0, 0.06, 0)
+    ui1b18.Text = "Vine Boom Sound"
+    local function ui1b18func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "bad",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b18.MouseButton1Down:Connect(ui1b18func)
+    local ui1b19 = ui1b:Clone()
+    ui1b19.Parent = ui2
+    ui1b19.Position = UDim2.new(0.225, 0, 0.06, 0)
+    ui1b19.Text = "Loading Guns Sound"
+    local function ui1b19func()
+        local args = {
+            [1] = {
+                [1] = "holdout",
+                [2] = "boss_sounds"
+            },
+            [2] = "yosef",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b19.MouseButton1Down:Connect(ui1b19func)
+    local ui1b20 = ui1b:Clone()
+    ui1b20.Parent = ui2
+    ui1b20.Position = UDim2.new(0.450, 0, 0.06, 0)
+    ui1b20.Text = "Sickler 1"
+    local function ui1b20func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "sickler_noise1",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b20.MouseButton1Down:Connect(ui1b20func)
+    local ui1b21 = ui1b:Clone()
+    ui1b21.Parent = ui2
+    ui1b21.Position = UDim2.new(0.225, 0, 0.15, 0)
+    ui1b21.Text = "Sickler 2"
+    local function ui1b21func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "sickler_noise3",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b21.MouseButton1Down:Connect(ui1b21func)
+    local ui1b22 = ui1b:Clone()
+    ui1b22.Parent = ui2
+    ui1b22.Position = UDim2.new(0, 0, 0.15, 0)
+    ui1b22.Text = "Sickler 3"
+    local function ui1b22func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "sickler_noise2",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b22.MouseButton1Down:Connect(ui1b22func)
+    local ui1b23 = ui1b:Clone()
+    ui1b23.Parent = ui2
+    ui1b23.Position = UDim2.new(0.675, 0, 0.09, 0)
+    ui1b23.Text = "Skinner 1"
+    local function ui1b23func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "skinner_noise1",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b23.MouseButton1Down:Connect(ui1b23func)
+    local ui1b24 = ui1b:Clone()
+    ui1b24.Parent = ui2
+    ui1b24.Position = UDim2.new(0.450, 0, 0.09, 0)
+    ui1b24.Text = "Skinner 2"
+    local function ui1b24func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "skinner_noise2",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b24.MouseButton1Down:Connect(ui1b24func)
+    local ui1b25 = ui1b:Clone()
+    ui1b25.Parent = ui2
+    ui1b25.Position = UDim2.new(0.225, 0, 0.09, 0)
+    ui1b25.Text = "Skinner 3"
+    local function ui1b25func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "skinner_noise3",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b25.MouseButton1Down:Connect(ui1b25func)
+    local ui1b26 = ui1b:Clone()
+    ui1b26.Parent = ui2
+    ui1b26.Position = UDim2.new(0, 0, 0.09, 0)
+    ui1b26.Text = "Skinner 4"
+    local function ui1b26func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "skinner_noise4",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b26.MouseButton1Down:Connect(ui1b26func)
+    local ui1b27 = ui1b:Clone()
+    ui1b27.Parent = ui2
+    ui1b27.Position = UDim2.new(0.675, 0, 0, 0)
+    ui1b27.Text = "Skinner 5"
+    local function ui1b27func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "skinner_noise5",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b27.MouseButton1Down:Connect(ui1b27func)
+    local ui1b28 = ui1b:Clone()
+    ui1b28.Parent = ui2
+    ui1b28.Position = UDim2.new(0.450, 0, 0, 0)
+    ui1b28.Text = "Sickler Alert"
+    local function ui1b28func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "alert",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b28.MouseButton1Down:Connect(ui1b28func)
+    local ui1b29 = ui1b:Clone()
+    ui1b29.Parent = ui2
+    ui1b29.Position = UDim2.new(0.225, 0, 0, 0)
+    ui1b29.Text = "Sickler Chainbreak"
+    local function ui1b29func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+            },
+            [2] = "chainbreak",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b29.MouseButton1Down:Connect(ui1b29func)
+    local ui1b30 = ui1b:Clone()
+    ui1b30.Parent = ui2
+    ui1b30.Position = UDim2.new(0, 0, 0, 0)
+    ui1b30.Text = "Hanger Cast"
+    local function ui1b30func()
+        local args = {
+            [1] = {
+                [1] = "shadow",
+                [2] = "hang"
+            },
+            [2] = "cast",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b30.MouseButton1Down:Connect(ui1b30func)
+    local ui1b31 = ui1b:Clone()
+    ui1b31.Parent = ui2
+    ui1b31.Position = UDim2.new(0.675, 0, 0.075, 0)
+    ui1b31.Text = "Hidden Taunt 1"
+    local function ui1b31func()
+        local args = {
+            [1] = {
+                [1] = "events",
+                [2] = "hiddenB"
+            },
+            [2] = "taunt1",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b31.MouseButton1Down:Connect(ui1b31func)
+    local ui1b32 = ui1b:Clone()
+    ui1b32.Parent = ui2
+    ui1b32.Position = UDim2.new(0.450, 0, 0.075, 0)
+    ui1b32.Text = "Hidden Taunt 2"
+    local function ui1b32func()
+        local args = {
+            [1] = {
+                [1] = "events",
+                [2] = "hiddenB"
+            },
+            [2] = "taunt2",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b32.MouseButton1Down:Connect(ui1b32func)
+    local ui1b33 = ui1b:Clone()
+    ui1b33.Parent = ui2
+    ui1b33.Position = UDim2.new(0.225, 0, 0.075, 0)
+    ui1b33.Text = "Hidden Taunt 3"
+    local function ui1b33func()
+        local args = {
+            [1] = {
+                [1] = "events",
+                [2] = "hiddenB"
+            },
+            [2] = "taunt3",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b19.MouseButton1Down:Connect(ui1b33func)
+    local ui1b34 = ui1b:Clone()
+    ui1b34.Parent = ui2
+    ui1b34.Position = UDim2.new(0, 0, 0.075, 0)
+    ui1b34.Text = "Hidden Taunt 4"
+    local function ui1b34func()
+        local args = {
+            [1] = {
+                [1] = "events",
+                [2] = "hiddenB"
+            },
+            [2] = "taunt4",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b34.MouseButton1Down:Connect(ui1b34func)
+    local ui1b35 = ui1b:Clone()
+    ui1b35.Parent = ui2
+    ui1b35.Position = UDim2.new(0.675, 0, 0.06, 0)
+    ui1b35.Text = "Hidden Attack"
+    local function ui1b35func()
+        local args = {
+            [1] = {
+                [1] = "events",
+                [2] = "hiddenB"
+            },
+            [2] = "attack",
+            [3] = game.Workspace -- Your character's torso
+        -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    
+    end
+    ui1b35.MouseButton1Down:Connect(ui1b35func)
+    
+    local ui3 = ui:Clone()
+    ui3.Name = "ui3"
+    ui3.Parent = ui.Parent
+    local ui1b36 = ui1b:Clone()
+    ui1b36.Parent = ui3
+    ui1b36.Position = UDim2.new(0, 0, 0, 0)
+    ui1b36.Text = "Spawn T-Hand"
+    local function ui1b36func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+local args = {
+    [1] = workspace.Interactables.Workbench,
+    [2] = "workbenchblueprintTHand",
+}
+
+game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+wait(1.7)
+local args = {
+    [1] = workspace.Interactables.Workbench,
+    [2] = "workbench",
+}
+
+game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+
+    ui1b36.MouseButton1Down:Connect(ui1b36func)
+    local ui1b37 = ui1b:Clone()
+    ui1b37.Parent = ui3
+    ui1b37.Position = UDim2.new(0.450, 0, 0, 0)
+    ui1b37.Text = "Decimator"
+    local function ui1b37func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintRBHammer",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b37.MouseButton1Down:Connect(ui1b37func)
+
+    local ui1b38 = ui1b:Clone()
+    ui1b38.Parent = ui3
+    ui1b38.Position = UDim2.new(0.225, 0, 0, 0)
+    ui1b38.Text = "Scar-L"
+    local function ui1b38func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintScarL",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b38.MouseButton1Down:Connect(ui1b38func)
+    
+    local ui1b39 = ui1b:Clone()
+    ui1b39.Parent = ui3
+    ui1b39.Position = UDim2.new(0.675, 0, 0, 0)
+    ui1b39.Text = "T-Axe (For teamkill)"
+    local function ui1b39func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintTAxe",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b39.MouseButton1Down:Connect(ui1b39func)
+    
+    local ui1b52 = ui1b:Clone()
+    ui1b52.Parent = ui3
+    ui1b52.Position = UDim2.new(0, 0, 0.015, 0)
+    ui1b52.Text = "Spas Shotgun"
+    local function ui1b52func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintSPShotgun",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b52.MouseButton1Down:Connect(ui1b52func)
+    
+    local ui1b53 = ui1b:Clone()
+    ui1b53.Parent = ui3
+    ui1b53.Position = UDim2.new(0.225, 0, 0.015, 0)
+    ui1b53.Text = "Military Axe"
+    local function ui1b53func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintMilAxe",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b53.MouseButton1Down:Connect(ui1b53func)
+
+    local ui1b54 = ui1b:Clone()
+    ui1b54.Parent = ui3
+    ui1b54.Position = UDim2.new(0.450, 0, 0.015, 0)
+    ui1b54.Text = "Military Machete"
+    local function ui1b54func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintMMachete",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b54.MouseButton1Down:Connect(ui1b54func)
+
+    local ui1b55 = ui1b:Clone()
+    ui1b55.Parent = ui3
+    ui1b55.Position = UDim2.new(0.675, 0, 0.015, 0)
+    ui1b55.Text = "AK-74"
+    local function ui1b55func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintSubAK",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b55.MouseButton1Down:Connect(ui1b55func)
+    
+    local ui1b56 = ui1b:Clone()
+    ui1b56.Parent = ui3
+    ui1b56.Position = UDim2.new(0, 0, 0.03, 0)
+    ui1b56.Text = "Fire Bomb"
+    local function ui1b56func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintMolo",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b56.MouseButton1Down:Connect(ui1b56func)
+    
+    local ui1b57 = ui1b:Clone()
+    ui1b57.Parent = ui3
+    ui1b57.Position = UDim2.new(0.225, 0, 0.03, 0)
+    ui1b57.Text = "Impact Grenade"
+    local function ui1b57func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintImpN",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b57.MouseButton1Down:Connect(ui1b57func)
+    
+    local ui1b58 = ui1b:Clone()
+    ui1b58.Parent = ui3
+    ui1b58.Position = UDim2.new(0.450, 0, 0.03, 0)
+    ui1b58.Text = "Military Grenade"
+    local function ui1b58func()
+        local workbench = workspace.Interactables:FindFirstChild("Workbench")
+        game.Players.LocalPlayer.Character:PivotTo(workbench:GetPivot() + Vector3.new(0, 5, 0))
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbenchblueprintMGrenade",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+        wait(1.7)
+        local args = {
+            [1] = workspace.Interactables.Workbench,
+            [2] = "workbench",
+        }
+        
+        game:GetService("ReplicatedStorage").Interactables.interaction:FireServer(unpack(args))
+    end
+    ui1b58.MouseButton1Down:Connect(ui1b58func)
+
+    local ui4 = ui:Clone()
+    ui4.Name = "ui4"
+    ui4.Parent = ui.Parent
+    
+    local ui1b40 = ui1b:Clone()
+    ui1b40.Parent = ui4
+    ui1b40.Position = UDim2.new(0, 0, 0, 0)
+    ui1b40.Text = "Heal 56 HP"
+    local function ui1b40func()
+       
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+    end
+    ui1b40.MouseButton1Down:Connect(ui1b40func)
+    
+    local ui1b41 = ui1b:Clone()
+    ui1b41.Parent = ui4
+    ui1b41.Position = UDim2.new(0.225, 0, 0, 0)
+    ui1b41.Text = "Respawn Enemy"
+    local function ui1b41func()
+        function Respawn()
+            workspace.ServerStuff.spawnPlayer:FireServer("respawncharacter")
+        end 
+        
+        function Hub()
+            workspace.ServerStuff.spawnPlayer:FireServer("hubbing")
+        end
+        
+        function Start(arg)
+            if arg == "Normal" then
+                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
+            elseif arg == "Ray" then
+                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
+            end
+        end
+        
+        function Spawn(Cords)
+            Respawn()
+            repeat task.wait() until not game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
+            Hub()
+            Start("Normal")
+            repeat task.wait() until game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
+            if Cords == "Match" then
+                game.Players.LocalPlayer.start.Value = "normal"
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(18.777990341186523, -2.5860984325408936, -9.264251708984375)
+            elseif Cords == "HubA" then
+                game.Players.LocalPlayer.start.Value = "hubbing"
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
+            elseif Cords == "Respawn" then
+                game.Players.LocalPlayer.start.Value = "hubbing"
+                Respawn()
+            elseif Cords == "HubB" then
+                game.Players.LocalPlayer.start.Value = ""
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
+            end
+        end
+        
+        Spawn("Match")
+    end
+    ui1b41.MouseButton1Down:Connect(ui1b41func)
+    
+    local ui1b42 = ui1b:Clone()
+    ui1b42.Parent = ui4
+    ui1b42.Position = UDim2.new(0.450, 0, 0, 0)
+    ui1b42.Text = "Respawn Menu"
+    local function ui1b42func()
+        function Respawn()
+            workspace.ServerStuff.spawnPlayer:FireServer("respawncharacter")
+        end 
+        
+        function Hub()
+            workspace.ServerStuff.spawnPlayer:FireServer("hubbing")
+        end
+        
+        function Start(arg)
+            if arg == "Normal" then
+                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
+            elseif arg == "Ray" then
+                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
+            end
+        end
+        
+        function Spawn(Cords)
+            Respawn()
+            repeat task.wait() until not game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
+            Hub()
+            Start("Normal")
+            repeat task.wait() until game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
+            if Cords == "Match" then
+                game.Players.LocalPlayer.start.Value = "normal"
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(18.777990341186523, -2.5860984325408936, -9.264251708984375)
+            elseif Cords == "HubA" then
+                game.Players.LocalPlayer.start.Value = "hubbing"
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
+            elseif Cords == "Respawn" then
+                game.Players.LocalPlayer.start.Value = "hubbing"
+                Respawn()
+            elseif Cords == "HubB" then
+                game.Players.LocalPlayer.start.Value = ""
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
+            end
+        end
+        
+        Spawn("Respawn")
+    end
+    ui1b42.MouseButton1Down:Connect(ui1b42func)
+    
+    local ui1b43 = ui1b:Clone()
+    ui1b43.Parent = ui4
+    ui1b43.Position = UDim2.new(0.675, 0, 0, 0)
+    ui1b43.Text = "Teamkill 1"
+    local function ui1b43func()
+        game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
+            if gpe then return end
+            if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            local args = {
+                [1] = "TAxe",
+                [2] = 35,
+                [3] = game.Workspace.CurrentCamera.CFrame,
+                [4] = 0.1960853934288,
+                [5] = {
+                    ["throwrating"] = 3,
+                    ["ability"] = "Heavy for throwing.",
+                    ["animset"] = "1HAXE",
+                    ["desc"] = "A funny story this one, a competitor once went insane and did nothing but throw axes at other compet" ..
+                        "itors so we designed these as a memorial to that brave hero that died from salmone" ..
+                        "lla after eating a chicken dinner.",
+                    ["weapontype"] = "Item",
+                    ["name"] = "Hunting Axe",
+                    ["damagerating"] = {
+                        [1] = 10,
+                        [2] = 35
+                    },
+                    ["woundrating"] = 1,
+                    ["sizerating"] = 3,
+                    ["icon"] = "2481831741"
+                },
+                [7] = false,
+                [8] = _G.Code1,
+                [10] = _G.Code2
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("throwWeapon"):FireServer(unpack(args))
+        end
+        if input.UserInputType == Enum.UserInputType.MouseButton2 then
+        local args = {
+            [1] = "TAxe",
+            [2] = 35,
+            [3] = game.Workspace.CurrentCamera.CFrame,
+            [4] = 0.1960853934288,
+            [5] = {
+                ["throwrating"] = 3,
+                ["ability"] = "Heavy for throwing.",
+                ["animset"] = "1HAXE",
+                ["desc"] = "A funny story this one, a competitor once went insane and did nothing but throw axes at other compet" ..
+                    "itors so we designed these as a memorial to that brave hero that died from salmone" ..
+                    "lla after eating a chicken dinner.",
+                ["weapontype"] = "Item",
+                ["name"] = "Hunting Axe",
+                ["damagerating"] = {
+                    [1] = 10,
+                    [2] = 35
+                },
+                ["woundrating"] = 1,
+                ["sizerating"] = 3,
+                ["icon"] = "2481831741"
+            },
+            [7] = false,
+            [8] = _G.Code1,
+            [10] = _G.Code2
+        }
+        
+        workspace:WaitForChild("ServerStuff"):WaitForChild("throwWeapon"):FireServer(unpack(args))
+        workspace:WaitForChild("ServerStuff"):WaitForChild("throwWeapon"):FireServer(unpack(args))
+        end
+        end)
+    end
+    ui1b43.MouseButton1Down:Connect(ui1b43func)
+    
+    local ui1b44 = ui1b:Clone()
+    ui1b44.Parent = ui4
+    ui1b44.Position = UDim2.new(0, 0, 0.015, 0)
+    ui1b44.Text = "Infinite Yield"
+    local function ui1b44func()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+       
+    end
+    ui1b44.MouseButton1Down:Connect(ui1b44func)
+    
+    local ui1b45 = ui1b:Clone()
+    ui1b45.Parent = ui4
+    ui1b45.Position = UDim2.new(0.225, 0, 0.015, 0)
+    ui1b45.Text = "Dash Script"
+    local function ui1b45func()
+       --// Service
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+
+--// Variables
+local localPlayer = Players.LocalPlayer
+local distanceMultiplier = 18
+local cooldown = false
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent == true then
+        return
+    end
+
+    if input.KeyCode == Enum.KeyCode.LeftControl then
+        if cooldown == true then
+            return
+        end
+        cooldown = true
+
+        local animation = localPlayer.Character.Humanoid.Animator:LoadAnimation(ReplicatedStorage.animationSets.TPanimSets.special.dash)
+        local direction = localPlayer.Character.PrimaryPart.CFrame.Position + Vector3.new(0, .5, 0)
+        local bodyPosition = Instance.new("BodyPosition")
+        bodyPosition.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+        bodyPosition.P = 27500
+
+        if UserInputService:IsKeyDown(Enum.KeyCode.W) == true then direction -= localPlayer.Character.PrimaryPart.CFrame.ZVector * distanceMultiplier end
+        if UserInputService:IsKeyDown(Enum.KeyCode.A) == true then direction -= localPlayer.Character.PrimaryPart.CFrame.XVector * distanceMultiplier end
+        if UserInputService:IsKeyDown(Enum.KeyCode.S) == true then direction += localPlayer.Character.PrimaryPart.CFrame.ZVector * distanceMultiplier end
+        if UserInputService:IsKeyDown(Enum.KeyCode.D) == true then direction += localPlayer.Character.PrimaryPart.CFrame.XVector * distanceMultiplier end
+
+        if UserInputService:IsKeyDown(Enum.KeyCode.W) == false and UserInputService:IsKeyDown(Enum.KeyCode.A) == false and UserInputService:IsKeyDown(Enum.KeyCode.S) == false and UserInputService:IsKeyDown(Enum.KeyCode.D) == false then direction += localPlayer.Character.PrimaryPart.CFrame.ZVector * distanceMultiplier end
+
+        workspace.ServerStuff.playAudio:FireServer({"soldiers"}, "dash", localPlayer.Character.PrimaryPart)
+        bodyPosition.Position = direction
+        bodyPosition.Parent = localPlayer.Character.PrimaryPart
+        animation:Play()
+
+        task.delay(.1, function()
+            bodyPosition:Destroy()
+                cooldown = false
+            end)
+    end
+end)
+
+    end
+    ui1b45.MouseButton1Down:Connect(ui1b45func)
+    
+    local ui1b46 = ui1b:Clone()
+    ui1b46.Parent = ui4
+    ui1b46.Position = UDim2.new(0.450, 0, 0.015, 0)
+    ui1b46.Text = "Storm Immunity"
+    local function ui1b46func()
+        local namecall = nil
+namecall = hookfunction(getrawmetatable(game).__namecall, newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    local args = {...}
+
+    if method == "FireServer" then
+        if self.Name == "dealDamage" then
+            if args[1] == "toxicdead" or args[1] == "toxicated" then
+                return true
+            end
+        end
+    end
+
+    return namecall(self, ...)
+end))
+
+    end
+    ui1b46.MouseButton1Down:Connect(ui1b46func)
+    
+    local ui1b47 = ui1b:Clone()
+    ui1b47.Parent = ui7
+    ui1b47.Position = UDim2.new(0, 0, 0, 0)
+    ui1b47.Text = "Queen's Demon V1"
+    local function ui1b47func()
+        -- keys, use tutorial to get them.
+_G.Code1 = 93285
+_G.Code2 = -193
+
+-- variables
+local reps = game:GetService("ReplicatedStorage")
+local uis = game:GetService("UserInputService")
+local players = game:GetService("Players")
+local rs = game:GetService("RunService")
+local mh = { instance = nil, senv = nil }
+local player = players.LocalPlayer
+local char = player.Character
+local namecall = nil
+local status = {
+    flaming = false
+}
+local toggles = {
+    using = false,
+    blocking = { false, 0, 0 },
+    dashing = { false },
+    healing = { false },
+    grappling = { false }
+}
+
+ for _, instance in ipairs(player.Backpack:GetChildren()) do
+        if instance:IsA("LocalScript") and instance.Name ~= "ClickDetectorScript" then
+ 
+mh.instance = instance
+                mh.senv = getsenv(mh.instance)
+rs.Heartbeat:Wait()
+            end
+end
+
+uis.InputBegan:Connect(function(input, gpe)
+if gpe then return end
+if input.KeyCode == Enum.KeyCode.Period then
+    local perk = game.Players.LocalPlayer.Character.current_perk.Value
+            workspace.ServerStuff.changeStats:InvokeServer("changeclass", "dagger")
+    local ohString1 = "sov_dagger"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer.Character.Torso,
+        [2] = game.Players.LocalPlayer:GetMouse().Hit.Position
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    wait(0.5)
+            workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+end
+if input.KeyCode == Enum.KeyCode.J then
+    local scream = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SC"].sickler_execute)
+    scream:Play()
+end
+if input.KeyCode == Enum.KeyCode.B then
+local args = {
+    [1] = {
+        [1] = "shadow",
+    },
+    [2] = "alert",
+    [3] = game.Workspace -- Your character's torso
+-- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+}
+
+workspace.ServerStuff.playAudio:FireServer(unpack(args))
+local scream = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SC"].roar)
+scream:Play()
+for i, e in pairs(game.Workspace.activePlayers:GetChildren()) do
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "player_ping"
+local ohInstance2 = e
+local ohInstance3 = game:GetService("Players").LocalPlayer
+local ohTable4 = {
+	[1] = e.HumanoidRootPart.Position,
+	[2] = 2
+}
+
+workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+end
+
+--[[
+Music List:
+
+zealot
+sledge
+bad
+rhyer
+yosef
+medieval
+--]]
+end
+if input.KeyCode == Enum.KeyCode.L then
+    
+local perk = game.Players.LocalPlayer.Character.current_perk.Value
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", "drift")
+    local ohString1 = "drifterbomb"
+    local ohTable2 = {
+        [1] = false,
+        [2] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+workspace.ServerStuff.applyGore:FireServer("drifter_cloak", char, nil, char.Torso.CFrame)
+wait(0.25)
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+end
+    if input.KeyCode == Enum.KeyCode.U then
+        for i, v in pairs(game.Players:GetChildren()) do
+        local hum = v.Character.HumanoidRootPart
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        workspace.ServerStuff.applyGore:FireServer("hangerPopup", hum, nil)
+        end
+        end
+if input.KeyCode == Enum.KeyCode.KeypadNine then
+workspace.GamemodeStuff:FindFirstChild("outerGas"):Destroy()
+end
+if input.KeyCode == Enum.KeyCode.KeypadFour then
+    local args = {
+        [1] = {
+            [1] = "shadow",
+        },
+        [2] = "alert",
+        [3] = game.Workspace -- Your character's torso
+    -- change to game.Workspace if you want everyone to hear it at the same time instead of on your character
+    }
+    
+    workspace.ServerStuff.playAudio:FireServer(unpack(args))
+    local scream = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SC"].roar)
+    scream:Play()
+    wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+wait(0.1)
+workspace.ServerStuff.dealDamage:FireServer("lazarusheal", 50, _G.Code1, _G.Code2)
+end
+
+if input.KeyCode == Enum.KeyCode.KeypadFive then
+local perk = game.Players.LocalPlayer.Character.current_perk.Value
+        workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shadow")
+
+        
+local args = {
+    [1] = "shadowhunter"
+}
+
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+
+wait(1)
+        workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+end 
+
+if input.KeyCode == Enum.KeyCode.KeypadSix then
+local perk = game.Players.LocalPlayer.Character.current_perk.Value
+        workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shadow")
+
+        
+local args = {
+    [1] = "shadowhunter"
+}
+
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+
+wait(1)
+        workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+end
+end)
+
+uis.InputEnded:Connect(function(input, gpe)
+if gpe then return end
+
+end)
+
+local tp = reps.animationSets.TPanimSets
+tp['2H'].equip.AnimationId = game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SC"].equip.AnimationId
+tp.global.shove.AnimationId = game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SKIN"].grapple.AnimationId
+tp['2H'].swing.AnimationId = game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SC"].swing.AnimationId
+tp['2H'].swing2.AnimationId = game:GetService("ReplicatedStorage").animationSets.TPanimSets["2SC"].swing2.AnimationId
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Queen's Demon",
+	Text = "Fully Loaded!",
+	})
+
+
+    end
+    ui1b47.MouseButton1Down:Connect(ui1b47func)
+
+    local ui1b48 = ui1b:Clone()
+    ui1b48.Parent = ui4
+    ui1b48.Position = UDim2.new(0, 0, 0.03, 0)
+    ui1b48.Text = "ENTITY Name-Tag"
+    local function ui1b48func()
+        _G.stats = {
+            health    = 0,
+            maxhealth = 0,
+            stamina   = 0,
+            name      = "ERROR {[ENTITY]} ERROR",
+            imgs = {
+                "7239401851",
+                "7239401851",
+                "7239401851",
+                "7239401851",
+                "7239401851",
+            }, --ALWAYS MUST HAVE 5 STRINGS!
+            items = {{{"Fists",true},{"Fists",false},{"Fists",false}}}
+        }
+    end
+    ui1b48.MouseButton1Down:Connect(ui1b48func)
+
+    local ui1b49 = ui1b:Clone()
+    ui1b49.Parent = ui4
+    ui1b49.Position = UDim2.new(0.675, 0, 0.015, 0)
+    ui1b49.Text = "Sledge Queen Abilities"
+    local function ui1b49func()
+        local uis = game:GetService("UserInputService")
+        local human = game.Players.LocalPlayer.Character.PrimaryPart
+        local player = game.Players.LocalPlayer
+        uis.InputBegan:Connect(function(input, gpe)
+        if gpe then return end
+        if input.KeyCode == Enum.KeyCode.Seven then
+        local uis = game:GetService("UserInputService")
+        local mouse = player:GetMouse()
+        local body1 = Instance.new("BodyPosition", human)
+        body1.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+        body1.P = 27500
+        body1.Position = human.Position+Vector3.new(0,10,0)
+        local args = {
+            [1] = {
+                [1] = "perks"
+            },
+            [2] = "shotshell_fire",
+            [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+        local args = {
+            [1] = "shotshell_blast",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(0,1.5,0)
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        wait(0.3)
+        local args = {
+            [1] = {
+                [1] = "perks"
+            },
+            [2] = "shotshell_fire",
+            [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+        local args = {
+            [1] = "shotshell_blast",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(0,1.5,0)
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        body1:Destroy()
+        local body2 = Instance.new("BodyPosition", human)
+        body2.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+        body2.P = 27500
+        body2.Position = mouse.Hit.Position
+        wait(0.4)
+        body2:Destroy()
+        local args = {
+            [1] = {
+                [1] = "perks"
+            },
+            [2] = "shotshell_fire",
+            [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+        }
+        
+        workspace.ServerStuff.playAudio:FireServer(unpack(args))
+        local args = {
+            [1] = "shotshell_blast",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(0,1.5,0)
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        end
+    end)
+    end
+    ui1b49.MouseButton1Down:Connect(ui1b49func)
+
+    local ui1b50 = ui1b:Clone()
+    ui1b50.Parent = ui4
+    ui1b50.Position = UDim2.new(0.225, 0, 0.03, 0)
+    ui1b50.Text = "Drop Scrap On death"
+    local function ui1b50func()
+        game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Bottle")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Bottle")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Bottle")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Bottle")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "MRE")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "MRE")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "MRE")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "MRE")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Beans")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("rations", "Soda")
+            workspace.ServerStuff.dropAmmo:FireServer("scrap", 450)
+       end)
+    end
+    ui1b50.MouseButton1Down:Connect(ui1b50func)
+
+    local ui1b51 = ui1b:Clone()
+    ui1b51.Parent = ui6
+    ui1b51.Position = UDim2.new(0.225, 0, 0, 0)
+    ui1b51.Text = "Fire Impact Airstrike"
+    local function ui1b51func()
+        
+local cam = game.Players.LocalPlayer.Character.HumanoidRootPart
+local bp = Instance.new("BodyPosition", cam)
+bp.P = 27500
+bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+local what = true
+local before = cam.Position
+local bombcam = Instance.new("Part", workspace)
+bombcam.Anchored = true
+bombcam.Position = Vector3.new(0, 100, 0)
+bombcam.Rotation = Vector3.new(-90, 0, 0)
+bombcam.Transparency = 1
+bombcam.CanCollide = false
+bp.Position = bombcam.Position
+
+game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
+if what == true then
+what = false
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = game.Players.LocalPlayer:GetMouse().Hit
+local ohNumber4 = 0.25589496666604344
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = game.Players.LocalPlayer:GetMouse().Hit
+local ohNumber4 = 0.25589496666604344
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = game.Players.LocalPlayer:GetMouse().Hit
+local ohNumber4 = 0.25589496666604344
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = game.Players.LocalPlayer:GetMouse().Hit
+local ohNumber4 = 0.25589496666604344
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+
+local ohString1 = "ImpN"
+local ohNumber2 = 0
+local ohCFrame3 = game.Players.LocalPlayer:GetMouse().Hit
+local ohNumber4 = 0.1906048999990162
+local ohTable5 = {
+	["throwrating"] = 4,
+	["ability"] = "Impact triggered explosive.",
+	["animset"] = "THRW",
+	["desc"] = "Formerly created  by a man from somewhere in Russia, this little explosive device can go boom upon impacting something! No idea what Russia is though.",
+	["weapontype"] = "Item",
+	["name"] = "Impact Grenade",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 80
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7)
+
+
+local ohString1 = "ImpN"
+local ohNumber2 = 0
+local ohCFrame3 = game.Players.LocalPlayer:GetMouse().Hit
+local ohNumber4 = 0.1906048999990162
+local ohTable5 = {
+	["throwrating"] = 4,
+	["ability"] = "Impact triggered explosive.",
+	["animset"] = "THRW",
+	["desc"] = "Formerly created  by a man from somewhere in Russia, this little explosive device can go boom upon impacting something! No idea what Russia is though.",
+	["weapontype"] = "Item",
+	["name"] = "Impact Grenade",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 80
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7)
+bp:Destroy()
+local bp1 = Instance.new("BodyPosition", cam)
+bp1.P = 27500
+bp1.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+bp1.Position = before
+wait(2)
+bp1:Destroy()
+end
+end)
+
+
+    end
+    ui1b51.MouseButton1Down:Connect(ui1b51func)
+
+    local uiu1b51 = ui1b:Clone()
+    uiu1b51.Parent = ui6
+    uiu1b51.Position = UDim2.new(0, 0, 0, 0)
+    uiu1b51.Text = "Arbiter Airstrike"
+    local function uiu1b51func()
+        
+local cam = game.Players.LocalPlayer.Character.HumanoidRootPart
+local bp = Instance.new("BodyPosition", cam)
+bp.P = 27500
+bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+local what = true
+local before = cam.Position
+local bombcam = Instance.new("Part", workspace)
+bombcam.Anchored = true
+bombcam.Position = Vector3.new(0, 100, 0)
+bombcam.Rotation = Vector3.new(-90, 0, 0)
+bombcam.Transparency = 1
+bombcam.CanCollide = false
+bp.Position = bombcam.Position+Vector3.new(0, -1, 0)
+
+game.Players.LocalPlayer:GetMouse().Button1Down:Connect(function()
+if what == true then
+what = false
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-1, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, -2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, -2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, 3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, -3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, -3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 1, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, -1, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+    
+    local ohString1 = "shotshell_blast"
+    local ohInstance2 = game.Players.LocalPlayer.Character
+    local ohInstance3 = game:GetService("Players").LocalPlayer
+    local ohTable4 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position
+    }
+    
+    workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+    wait(1)
+    bp:Destroy()
+    local bp1 = Instance.new("BodyPosition", cam)
+    bp1.P = 27500
+    bp1.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+    bp1.Position = before
+    wait(2)
+    bp1:Destroy()
+end
+end)
+    end
+    uiu1b51.MouseButton1Down:Connect(uiu1b51func)
+
+    local uiu1bu51 = ui1b:Clone()
+    uiu1bu51.Parent = ui6
+    uiu1bu51.Position = UDim2.new(0.450, 0, 0, 0)
+    uiu1bu51.Text = "Ultra Arbiter Shots (Y)"
+    local function uiu1bu51func()
+        -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
+    if gpe then return end
+    if input.KeyCode == Enum.KeyCode.Y then
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-1, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, -2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, -2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 2)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, 3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, -3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 0)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, -3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -3)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 1, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    local ohString1 = "shotshell"
+    local ohTable2 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, -1, -1)
+    }
+    
+    workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+    -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+    
+    local ohString1 = "shotshell_blast"
+    local ohInstance2 = game.Players.LocalPlayer.Character
+    local ohInstance3 = game:GetService("Players").LocalPlayer
+    local ohTable4 = {
+        [1] = game.Players.LocalPlayer:GetMouse().Hit.Position
+    }
+    
+    workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+    end
+    end)
+    end
+    uiu1bu51.MouseButton1Down:Connect(uiu1bu51func)
+
+    local uiu1bu51 = ui1b:Clone()
+    uiu1bu51.Parent = ui6
+    uiu1bu51.Position = UDim2.new(0.675, 0, 0, 0)
+    uiu1bu51.Text = "Fire Arbiter Shots (Y)"
+    local function uiu1bu51func()
+        -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+        game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
+            if gpe then return end
+            if input.KeyCode == Enum.KeyCode.Y then
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 0, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-1, 0, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 1)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, -2)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 2)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 2)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, -2)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -2)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 2)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, 3)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, -3)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 3)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, -3)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -3)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 1, -1)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, -1, -1)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+            
+            local ohString1 = "shotshell_blast"
+            local ohInstance2 = game.Players.LocalPlayer.Character
+            local ohInstance3 = game:GetService("Players").LocalPlayer
+            local ohTable4 = {
+                [1] = game.Players.LocalPlayer:GetMouse().Hit.Position
+            }
+            
+            workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            end
+            end)
+    end
+    uiu1bu51.MouseButton1Down:Connect(uiu1bu51func)
+
+    local uiu1bu51 = ui1b:Clone()
+    uiu1bu51.Parent = ui6
+    uiu1bu51.Position = UDim2.new(0, 0, 0.015, 0)
+    uiu1bu51.Text = "Fire Explode All Enemies"
+    local function uiu1bu51func()
+        -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+        
+local perk = game.Players.LocalPlayer.Character.current_perk.Value
+            
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shotgun")
+            for i, v in pairs(game.Workspace.activeHostiles:GetChildren()) do
+
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            local ohString1 = "shotshell"
+            local ohTable2 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+            -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+            
+            local ohString1 = "shotshell_blast"
+            local ohInstance2 = game.Players.LocalPlayer.Character
+            local ohInstance3 = game:GetService("Players").LocalPlayer
+            local ohTable4 = {
+                [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+            }
+            
+            workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = v.HumanoidRootPart.CFrame
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = v.HumanoidRootPart.CFrame
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = v.HumanoidRootPart.CFrame
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+            local args = {
+            [1] = "immolate_ability",
+            [2] = game:GetService("Players").LocalPlayer.Character,
+            [3] = game:GetService("Players").LocalPlayer,
+            [4] = {
+                [1] = v.HumanoidRootPart.CFrame
+            }
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        
+            end
+            wait(0.5)
+                workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+    end
+    uiu1bu51.MouseButton1Down:Connect(uiu1bu51func)
+
+    local uiu1bu51 = ui1b:Clone()
+    uiu1bu51.Parent = ui6
+    uiu1bu51.Position = UDim2.new(0.675, 0, 0.015, 0)
+    uiu1bu51.Text = "Sovereign Mark All Enemies"
+    local function uiu1bu51func()
+        -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+        
+local perk = game.Players.LocalPlayer.Character.current_perk.Value
+            
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", "dagger")
+            for i, v in pairs(game.Workspace.activeHostiles:GetChildren()) do
+                local ohString1 = "sov_dagger"
+                local ohTable2 = {
+                    [1] = game.Players.LocalPlayer.Character.Torso,
+                    [2] = v.HumanoidRootPart.Position
+                }
+                
+                workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+                
+            end
+            wait(0.5)
+            
+            workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+    end
+    uiu1bu51.MouseButton1Down:Connect(uiu1bu51func)
+
+    local uiu1bu51 = ui1b:Clone()
+    uiu1bu51.Parent = ui6
+    uiu1bu51.Position = UDim2.new(0.225, 0, 0.015, 0)
+    uiu1bu51.Text = "Tickspider Bomb All Enemies"
+    local function uiu1bu51func()
+        
+local perk = game.Players.LocalPlayer.Character.current_perk.Value
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", "trapper")
+        for i,v in pairs(game.Workspace.activeHostiles:GetChildren()) do
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+            local args = {
+                [1] = "throwticks",
+                [2] = {
+                    [1] = v.HumanoidRootPart.CFrame+Vector3.new(0, 3, 0),
+                    [2] = true
+                }
+            }
+            
+            workspace:WaitForChild("ServerStuff"):WaitForChild("dealDamage"):FireServer(unpack(args))
+    end
+    wait(1)
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+end
+    uiu1bu51.MouseButton1Down:Connect(uiu1bu51func)
+
+    local uiu1bu51 = ui1b:Clone()
+    uiu1bu51.Parent = ui6
+    uiu1bu51.Position = UDim2.new(0.450, 0, 0.015, 0)
+    uiu1bu51.Text = "Shadow Teleport"
+    local function uiu1bu51func()
+        game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
+            if gpe then return end
+            if input.KeyCode == Enum.KeyCode.M then
+                   local bp = Instance.new("BodyPosition")
+                   bp.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+                   bp.P = 27500
+                   bp.Parent = game.Players.LocalPlayer.Character.PrimaryPart
+                   bp.Position = game.Players.LocalPlayer:GetMouse().Hit.Position
+                   wait(0.2)
+                   bp:Destroy()
+                   workspace.ServerStuff.applyGore:FireServer("drifter_puff", char, nil, game.Players.LocalPlayer.Character.Torso.CFrame)
+                   
+                   workspace.ServerStuff.applyGore:FireServer("drifter_puff", char, nil, game.Players.LocalPlayer.Character.Torso.CFrame)
+                   
+                   workspace.ServerStuff.applyGore:FireServer("drifter_puff", char, nil, game.Players.LocalPlayer.Character.Torso.CFrame)
+                   
+                   workspace.ServerStuff.applyGore:FireServer("drifter_puff", char, nil, game.Players.LocalPlayer.Character.Torso.CFrame)
+                   
+                   workspace.ServerStuff.applyGore:FireServer("drifter_puff", char, nil, game.Players.LocalPlayer.Character.Torso.CFrame)
+                   
+               end
+               end)
+end
+    uiu1bu51.MouseButton1Down:Connect(uiu1bu51func)
+
+    
+
+    local uui1b50 = ui1b:Clone()
+    uui1b50.Parent = ui5
+    uui1b50.Position = UDim2.new(0, 0, 0, 0)
+    uui1b50.Text = "Get Full Rations"
+    local function uui1b50func()
+        local ration_system_handler = getsenv(game.Players.LocalPlayer.Backpack.MainHandler).ration_system_handler
+local RationSystemHandlerProxy = {
+    hunger = math.huge,
+	thirst = math.huge,
+	full_bar = 360,
+	bonus_threshold = 320,
+	bonus_add = 80,
+	stats_lower = 20,
+	cooldown_rations = 40,
+	cooldown_eat_tick = 0,
+	cooldown_drink_tick = 0,
+	low_tier = 180,
+	high_tier = 300,
+	hunger_lower_atk = 0,
+	hunger_lower_def = 0,
+	hunger_buff_atk = 50,
+	hunger_buff_mvmt = 5,
+	thirst_lower_def = 0,
+	thirst_lower_atk = 0,
+	thirst_buff_def = 50,
+	thirst_buff_stam = 1.0,
+	Beans = 100,
+	MRE = 100,
+	Soda = 100,
+	Bottle = 100
+}
+
+-- // Set
+for i, v in pairs(RationSystemHandlerProxy) do
+    ration_system_handler[i] = v
+end
+    end
+    uui1b50.MouseButton1Down:Connect(uui1b50func)
+
+    local uui1b51 = ui1b:Clone()
+    uui1b51.Parent = ui5
+    uui1b51.Position = UDim2.new(0.225, 0, 0, 0)
+    uui1b51.Text = "Inf ammo"
+    local function uui1b51func()
+for i, v in pairs(getupvalues(getsenv(game.Players.LocalPlayer.Backpack.MainHandler).unloadgun)) do
+if typeof(v) == "table" and v["Light"] ~= nil then
+            v["Light"] = 99999999999999
+            v["Shells"] = 99999999999999
+            v["Medium"] = 99999999999999
+            v["Heavy"] = 99999999999999
+            v["Short"] = 99999999999999
+            v["Long"] = 99999999999999
+            v["Small"] = 99999999999999
+        end
+end
+    end
+    uui1b51.MouseButton1Down:Connect(uui1b51func)
+
+    local uui1b52 = ui1b:Clone()
+    uui1b52.Parent = ui5
+    uui1b52.Position = UDim2.new(0.450, 0, 0, 0)
+    uui1b52.Text = "Inf Aux"
+    local function uui1b52func()
+if getsenv(game.Players.LocalPlayer.Backpack.MainHandler)["aux_usage"] ~= nil then
+    getsenv(game.Players.LocalPlayer.Backpack.MainHandler)["aux_usage"] = 999999999999999
+end
+    end
+    uui1b52.MouseButton1Down:Connect(uui1b52func)
+
+    local uui1b52 = ui1b:Clone()
+    uui1b52.Parent = ui5
+    uui1b52.Position = UDim2.new(0.675, 0, 0, 0)
+    uui1b52.Text = "Inf Mag/Clip Ammo (WIP)"
+    local function uui1b52func()
+        
+    end
+    uui1b52.MouseButton1Down:Connect(uui1b52func)
+
+    local uui1b52 = ui1b:Clone()
+    uui1b52.Parent = ui9
+    uui1b52.Position = UDim2.new(0.450, 0, 0, 0)
+    uui1b52.Text = "Fire Explosion Trap 1 (Outpost)"
+    local function uui1b52func()
+        
+local ohCFrame3 = CFrame.new(190.446655, 4.91667891, 102.292389, 0.999807298, 0.000860595028, -0.0196129177, 1.70305662e-24, 0.999038696, 0.0438368097, 0.01963179, -0.0438283607, 0.998846173)
+
+local dev1 = false
+local hitbox = Instance.new("Part", workspace)
+hitbox.Anchored = true
+hitbox.Transparency = 1
+hitbox.CanCollide = false
+hitbox.CFrame = ohCFrame3
+hitbox.Size = Vector3.new(7, 1, 7)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+hitbox.Touched:Connect(function(hit)
+if hit.Parent:FindFirstChild("Humanoid") then
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+if not dev1 then
+dev1 = true
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+hitbox:Destroy()
+local ohString1 = "ImpN"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(174.847122, 4.91667938, 106.183884, 0.0169999469, 0.00196232856, -0.999853611, 1.56418227e-13, 0.999998093, 0.00196261215, 0.999855518, -3.33643038e-05, 0.0169999152)
+local ohNumber4 = 0.1926583250024123
+local ohTable5 = {
+	["throwrating"] = 4,
+	["ability"] = "Impact triggered explosive.",
+	["animset"] = "THRW",
+	["desc"] = "Formerly created  by a man from somewhere in Russia, this little explosive device can go boom upon impacting something! No idea what Russia is though.",
+	["weapontype"] = "Item",
+	["name"] = "Impact Grenade",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 80
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "ImpN"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(204.842575, 4.91667843, 101.176735, 0.0124530289, 0.0222503338, 0.999674857, -5.7743903e-09, 0.999752402, -0.0222520586, -0.999922454, 0.000277099753, 0.0124499453)
+local ohNumber4 = 0.19510127500325325
+local ohTable5 = {
+	["throwrating"] = 4,
+	["ability"] = "Impact triggered explosive.",
+	["animset"] = "THRW",
+	["desc"] = "Formerly created  by a man from somewhere in Russia, this little explosive device can go boom upon impacting something! No idea what Russia is though.",
+	["weapontype"] = "Item",
+	["name"] = "Impact Grenade",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 80
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(198.11528, 9.29042912, 120.458832, 0.999998093, -0.000422000827, 0.0018958468, -2.63763655e-09, 0.97611022, 0.217275992, -0.00194224599, -0.217275575, 0.976108372)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(189.770615, 12.5057344, 123.168571, 0.999906063, 0.00278260745, -0.0134181688, -1.52650082e-05, 0.979392707, 0.201965109, 0.0137036461, -0.201945961, 0.979300797)
+local ohNumber4 = 0.2579908666666597
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(177.856369, 8.97951317, 118.909439, 0.967837036, 0.0776869878, -0.239282683, -0.000116896408, 0.95126617, 0.308371067, 0.251577944, -0.298424989, 0.920679688)
+local ohNumber4 = 0.25671036666608416
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(205.849945, 5.09567738, 126.162979, 0.0106737288, -0.00706676114, -0.999918103, -7.27595675e-12, 0.999975026, -0.00706716394, 0.999943018, 7.54329958e-05, 0.0106734633)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(170.208649, 6.97440434, 113.159149, 0.775905132, 0.0263534579, 0.630298913, -0, 0.99912703, -0.0417745486, -0.6308496, 0.0324130878, 0.775227845)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(183.210709, 0.416680336, 133.947845, 0.999998033, -0.000296454964, 0.00195311708, -0, 0.988675892, 0.150066718, -0.00197548768, -0.15006642, 0.988673985)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(188.055786, 0.603307843, 73.6815262, -0.700593293, -0.280360192, 0.656176269, -0, 0.919579983, 0.39290297, -0.713560879, 0.275265187, -0.644251525)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(203.482452, 0.617010355, 75.8650055, -0.988124251, -0.0443744175, 0.147110164, -0, 0.957392931, 0.288788676, -0.153657049, 0.285359085, -0.946023166)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(193.241058, 19.2891159, 82.1591492, -0.999442995, 0.0143045029, 0.0301513355, 9.31322575e-10, 0.903479338, -0.428631812, -0.0333724692, -0.428393066, -0.902976036)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(204.839401, 9.13773346, 83.4275208, -0.0993043035, -0.658084035, 0.746367276, -0, 0.750074804, 0.661353052, -0.995057106, 0.0656752065, -0.074485667)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(198.891312, 18.3666248, 82.1591492, -0.997409582, 0.0273915119, 0.0665130764, 1.86264537e-09, 0.924659729, -0.380794615, -0.0719325021, -0.379808187, -0.922264338)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(198.891312, 18.3666248, 82.1591492, -0.997409582, 0.0273915119, 0.0665130764, 1.86264537e-09, 0.924659729, -0.380794615, -0.0719325021, -0.379808187, -0.922264338)
+local ohNumber4 = 0.2558334999970005
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["icon"] = "2331748192",
+	["sizerating"] = 4
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+wait(1)
+dev1 = false
+end
+end
+end)
+    end
+    uui1b52.MouseButton1Down:Connect(uui1b52func)
+
+    local uui1b52 = ui1b:Clone()
+    uui1b52.Parent = ui9
+    uui1b52.Position = UDim2.new(0, 0, 0, 0)
+    uui1b52.Text = "Fire Explosion Trap 1 (Mountain)"
+    local function uui1b52func()
+        
+local ohCFrame3 = CFrame.new(201.055191, 19.3168087, -92.8709259, 0.999606371, -0.00049816852, 0.0280508306, 1.8176338e-06, 0.999843478, 0.0176919401, -0.0280552544, -0.0176849235, 0.999449909)
+
+local dev1 = false
+local hitbox = Instance.new("Part", workspace)
+hitbox.Anchored = true
+hitbox.Transparency = 1
+hitbox.CanCollide = false
+hitbox.CFrame = ohCFrame3
+hitbox.Size = Vector3.new(7, 1, 7)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+hitbox.Touched:Connect(function(hit)
+if hit.Parent:FindFirstChild("Humanoid") then
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+if not dev1 then
+dev1 = true
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(203.723526, 27.7168903, -107.188721, -0.999565423, -0.0136396121, 0.0261319634, 4.50400854e-08, 0.886506975, 0.462715179, -0.0294774249, 0.462514102, -0.88612169)
+local ohNumber4 = 0.2565071333325856
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Molo"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(197.768295, 27.7168903, -107.377342, -0.999844372, 0.00783319771, -0.0158058759, 1.25663024e-09, 0.896003008, 0.444048017, 0.0176404286, 0.443978906, -0.895863593)
+local ohNumber4 = 0.26024046666619444
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Ignites an area in flames.",
+	["animset"] = "THRW",
+	["desc"] = "Ignite!",
+	["weapontype"] = "Item",
+	["name"] = "Fire Bomb",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 10
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohString8 = "underhand"
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohString8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "ImpN"
+local ohNumber2 = 0
+local ohCFrame3 = CFrame.new(201.742538, 27.7168903, -107.17775, -0.99995774, -0.00412606774, 0.00821718387, -7.41466757e-14, 0.893665671, 0.448733389, -0.00919491984, 0.448714435, -0.893627882)
+local ohNumber4 = 0.19005187500079046
+local ohTable5 = {
+	["throwrating"] = 4,
+	["ability"] = "Impact triggered explosive.",
+	["animset"] = "THRW",
+	["desc"] = "Formerly created  by a man from somewhere in Russia, this little explosive device can go boom upon impacting something! No idea what Russia is though.",
+	["weapontype"] = "Item",
+	["name"] = "Impact Grenade",
+	["damagerating"] = {
+		[1] = 0,
+		[2] = 0,
+		[3] = 80
+	},
+	["woundrating"] = 2,
+	["sizerating"] = 4,
+	["icon"] = "2331748192"
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7)
+hitbox:Destroy()
+wait(1)
+dev1 = false
+end
+end
+end)
+    end
+    uui1b52.MouseButton1Down:Connect(uui1b52func)
+
+    local uui1b52 = ui1b:Clone()
+    uui1b52.Parent = ui9
+    uui1b52.Position = UDim2.new(0.225, 0, 0, 0)
+    uui1b52.Text = "Hunting Axe Trap (Mountain)"
+    local function uui1b52func()
+      
+local ohCFrame3 = CFrame.new(201.055191, 19.3168087, -92.8709259, 0.999606371, -0.00049816852, 0.0280508306, 1.8176338e-06, 0.999843478, 0.0176919401, -0.0280552544, -0.0176849235, 0.999449909)
+
+local dev1 = false
+local hitbox = Instance.new("Part", workspace)
+hitbox.Anchored = true
+hitbox.Transparency = 1
+hitbox.CanCollide = false
+hitbox.CFrame = ohCFrame3
+hitbox.Size = Vector3.new(7, 1, 7)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+hitbox.Touched:Connect(function(hit)
+if hit.Parent:FindFirstChild("Humanoid") then
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+if not dev1 then
+dev1 = true
+local ohString1 = "TAxe"
+local ohNumber2 = 35
+local ohCFrame3 = CFrame.new(204.352219, 27.7168903, -109.608353, -0.998630702, -0.0304712448, 0.0425220542, -3.20401256e-07, 0.812846839, 0.582477391, -0.0523127317, 0.581679821, -0.811733842)
+local ohNumber4 = 0.1960853934288
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Heavy for throwing.",
+	["animset"] = "1HAXE",
+	["desc"] = "A funny story this one, a competitor once went insane and did nothing but throw axes at other competitors so we designed these as a memorial to that brave hero that died from salmonella after eating a chicken dinner.",
+	["weapontype"] = "Item",
+	["name"] = "Hunting Axe",
+	["damagerating"] = {
+		[1] = 10,
+		[2] = 35
+	},
+	["woundrating"] = 1,
+	["icon"] = "2481831741",
+	["sizerating"] = 3
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohNumber8 = 93285
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohNumber8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "TAxe"
+local ohNumber2 = 35
+local ohCFrame3 = CFrame.new(200.388199, 27.7168903, -109.767555, -0.999706328, 0.0127706295, -0.0205933116, 1.97208306e-06, 0.849894285, 0.52695328, 0.024231663, 0.526798487, -0.84964478)
+local ohNumber4 = 0.1960853934288
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Heavy for throwing.",
+	["animset"] = "1HAXE",
+	["desc"] = "A funny story this one, a competitor once went insane and did nothing but throw axes at other competitors so we designed these as a memorial to that brave hero that died from salmonella after eating a chicken dinner.",
+	["weapontype"] = "Item",
+	["name"] = "Hunting Axe",
+	["damagerating"] = {
+		[1] = 10,
+		[2] = 35
+	},
+	["woundrating"] = 1,
+	["icon"] = "2481831741",
+	["sizerating"] = 3
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohNumber8 = 93285
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohNumber8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "TAxe"
+local ohNumber2 = 35
+local ohCFrame3 = CFrame.new(200.388199, 27.7168903, -109.767555, -0.999706328, 0.0127706295, -0.0205933116, 1.97208306e-06, 0.849894285, 0.52695328, 0.024231663, 0.526798487, -0.84964478)
+local ohNumber4 = 0.1960853934288
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Heavy for throwing.",
+	["animset"] = "1HAXE",
+	["desc"] = "A funny story this one, a competitor once went insane and did nothing but throw axes at other competitors so we designed these as a memorial to that brave hero that died from salmonella after eating a chicken dinner.",
+	["weapontype"] = "Item",
+	["name"] = "Hunting Axe",
+	["damagerating"] = {
+		[1] = 10,
+		[2] = 35
+	},
+	["woundrating"] = 1,
+	["icon"] = "2481831741",
+	["sizerating"] = 3
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohNumber8 = 93285
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohNumber8)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "TAxe"
+local ohNumber2 = 35
+local ohCFrame3 = CFrame.new(198.066589, 27.7168903, -107.748001, -0.999780774, 0.0103624603, -0.0181949381, 2.96495664e-08, 0.868955731, 0.494889826, 0.0209388714, 0.494781345, -0.868765235)
+local ohNumber4 = 0.1960853934288
+local ohTable5 = {
+	["throwrating"] = 3,
+	["ability"] = "Heavy for throwing.",
+	["animset"] = "1HAXE",
+	["desc"] = "A funny story this one, a competitor once went insane and did nothing but throw axes at other competitors so we designed these as a memorial to that brave hero that died from salmonella after eating a chicken dinner.",
+	["weapontype"] = "Item",
+	["name"] = "Hunting Axe",
+	["damagerating"] = {
+		[1] = 10,
+		[2] = 35
+	},
+	["woundrating"] = 1,
+	["icon"] = "2481831741",
+	["sizerating"] = 3
+}
+local ohNil6 = nil
+local ohBoolean7 = false
+local ohNumber8 = 93285
+
+workspace.ServerStuff.throwWeapon:FireServer(ohString1, ohNumber2, ohCFrame3, ohNumber4, ohTable5, ohNil6, ohBoolean7, ohNumber8)
+hitbox:Destroy()
+wait(1)
+dev1 = false
+end
+end
+end)
+    end
+    uui1b52.MouseButton1Down:Connect(uui1b52func)
+
+
+
+    local ui1act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui1act.Position = UDim2.new(0.95, -340, 0.9, 0)
+    ui1act.Text = "Perks"
+    ui1act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui1act.Name = "PerksButton"
+    ui1act.MouseButton1Down:Connect(function()
+    if ui1.Visible == false then
+    ui1.Visible = true
+    ui1act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui1act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui2" or v.Name == "ui3" or v.Name == "ui4" or v.Name == "ui6" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui10" or v.Name == "ui8" or v.Name == "ui9"  then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+
+    local ui2act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui2act.Position = UDim2.new(0.95, -340, 0.98, 0)
+    ui2act.Text = "Sounds"
+    ui2act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui2act.Name = "SoundsButton"
+    ui2act.MouseButton1Down:Connect(function()
+    if ui2.Visible == false then
+        ui2.Visible = true
+        ui2act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui2act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui4" or v.Name == "ui6" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui10" or v.Name == "ui8" or v.Name == "ui9"  then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+
+    local ui3act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui3act.Position = UDim2.new(0.95, -510, 0.9, 0)
+    ui3act.Text = "Spawn Items"
+    ui3act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui3act.Name = "SpawnItemsButton"
+    ui3act.MouseButton1Down:Connect(function()
+    if ui3.Visible == false then
+    ui3.Visible = true
+    ui3act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui3act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui1" or v.Name == "ui6" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui10" or v.Name == "ui8" or v.Name == "ui9" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+    
+    local ui4act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui4act.Position = UDim2.new(0.95, -510, 0.98, 0)
+    ui4act.Text = "Misc"
+    ui4act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui4act.Name = "MiscButton"
+    ui4act.MouseButton1Down:Connect(function()
+    if ui4.Visible == false then
+        ui4.Visible = true
+        ui4act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui4act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui2" or v.Name == "ui6" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui10" or v.Name == "ui8" or v.Name == "ui9" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+
+    local ui5act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui5act.Position = UDim2.new(0.95, -680, 0.9, 0)
+    ui5act.Text = "Stats"
+    ui5act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui5act.Name = "StatsButton"
+    ui5act.MouseButton1Down:Connect(function()
+    if ui5.Visible == false then
+    ui5.Visible = true
+    ui5act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui5act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui1" or v.Name == "ui4" or v.Name == "ui6" or v.Name == "ui7" or v.Name == "ui10" or v.Name == "ui8" or v.Name == "ui9" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+    
+    local ui6act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui6act.Position = UDim2.new(0.95, -680, 0.98, 0)
+    ui6act.Text = "Abilities"
+    ui6act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui6act.Name = "AbilitiesButton"
+    ui6act.MouseButton1Down:Connect(function()
+    if ui6.Visible == false then
+        ui6.Visible = true
+        ui6act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui6act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui10" or v.Name == "ui8" or v.Name == "ui9" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+    
+    local ui7act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui7act.Position = UDim2.new(0.95, -170, 0.8, 0)
+    ui7act.Size = UDim2.new(0, 110, 0, 35)
+    ui7act.TextScaled = true
+    ui7act.Text = "Char Scripts"
+    ui7act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui7act.Name = "CharactersButton"
+    ui7act.MouseButton1Down:Connect(function()
+    if ui7.Visible == false then
+        ui7.Visible = true
+        ui7act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui7act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui5" or v.Name == "ui6" or v.Name == "ui9" or v.Name == "ui8" or v.Name == "ui10" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+    
+    local ui8act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui8act.Position = UDim2.new(0.95, -170, 0.7, 0)
+    ui8act.Size = UDim2.new(0, 110, 0, 35)
+    ui8act.TextScaled = true
+    ui8act.Text = "Teleports"
+    ui8act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui8act.Name = "TeleportsButton"
+    ui8act.MouseButton1Down:Connect(function()
+    if ui8.Visible == false then
+        ui8.Visible = true
+        ui8act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui8act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui6" or v.Name == "ui9" or v.Name == "ui10" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+    
+    local ui9act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui9act.Position = UDim2.new(0.95, -300, 0.8, 0)
+    ui9act.Size = UDim2.new(0, 110, 0, 35)
+    ui9act.TextScaled = true
+    ui9act.Text = "Traps"
+    ui9act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui9act.Name = "Extra1Button"
+    ui9act.MouseButton1Down:Connect(function()
+    if ui9.Visible == false then
+        ui9.Visible = true
+        ui9act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui9act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui6" or v.Name == "ui8" or v.Name == "ui10" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+    
+    local ui10act = game:GetService("Players").LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rations:Clone()
+    ui10act.Position = UDim2.new(0.95, -300, 0.7, 0)
+    ui10act.Size = UDim2.new(0, 110, 0, 35)
+    ui10act.TextScaled = true
+    ui10act.Text = "Extra 2"
+    ui10act.Parent = game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg
+    ui10act.Name = "Extra2Button"
+    ui10act.MouseButton1Down:Connect(function()
+    if ui10.Visible == false then
+        ui10.Visible = true
+        ui10act.BackgroundTransparency = 0.3
+    for i, v in pairs(ui10act.Parent:GetChildren()) do
+    if v:IsA("TextButton") then
+    v.BackgroundTransparency = 0.7
+    elseif v.Name == "rationstab" or v.Name == "weaponinfotab" or v.Name == "ammodroptab" or v.Name == "scraptab" or v.Name == "ui1" or v.Name == "ui3" or v.Name == "ui2" or v.Name == "ui4" or v.Name == "ui5" or v.Name == "ui7" or v.Name == "ui6" or v.Name == "ui8" or v.Name == "ui9" then
+    v.Visible = false
+    end
+    end
+    end
+    end)
+
+    while wait(0.01) do
+    if game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.rationstab.Visible == true or game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.weaponinfotab.Visible == true or game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.ammodroptab.Visible == true or game.Players.LocalPlayer.PlayerGui.mainHUD.TabMenu.bg.scraptab.Visible == true then
+    ui1.Visible = false
+    ui2.Visible = false
+    ui3.Visible = false
+    ui4.Visible = false
+    ui5.Visible = false
+    ui6.Visible = false
+    end
+    end
+    
+end
+
+    game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+    _G.what = false
+    _G.chattt = false
+    end)
+
+
+
+
+end
+    
+startUI()
+
+_G.chattt = false
+
+wait(5)
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    if _G.chattt == false then
+        _G.chattt = true
+    if msg == "/e ultra fire shots" then
+    game:GetService("UserInputService").InputBegan:Connect(function(input, gpe)
+        if gpe then return end
+        if input.KeyCode == Enum.KeyCode.Y then
+            
+local perk = player.Character.current_perk.Value
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shotgun")
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 0, 0)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-1, 0, 0)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 1)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, -2)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 2)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 2)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, -2)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -2)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, 2)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(2, 0, 0)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-2, 0, 0)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, 3)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, -3)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 3)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(-3, 0, 0)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(3, 0, -3)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -3)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(0, 0, -1)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, 1, -1)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        local ohString1 = "shotshell"
+        local ohTable2 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position+Vector3.new(1, -1, -1)
+        }
+        
+        workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+        -- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+        
+        local ohString1 = "shotshell_blast"
+        local ohInstance2 = game.Players.LocalPlayer.Character
+        local ohInstance3 = game:GetService("Players").LocalPlayer
+        local ohTable4 = {
+            [1] = game.Players.LocalPlayer:GetMouse().Hit.Position
+        }
+        
+        workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+        local args = {
+        [1] = "immolate_ability",
+        [2] = game:GetService("Players").LocalPlayer.Character,
+        [3] = game:GetService("Players").LocalPlayer,
+        [4] = {
+            [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+        }
+    }
+    
+    workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        local args = {
+        [1] = "immolate_ability",
+        [2] = game:GetService("Players").LocalPlayer.Character,
+        [3] = game:GetService("Players").LocalPlayer,
+        [4] = {
+            [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+        }
+    }
+    
+    workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        local args = {
+        [1] = "immolate_ability",
+        [2] = game:GetService("Players").LocalPlayer.Character,
+        [3] = game:GetService("Players").LocalPlayer,
+        [4] = {
+            [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+        }
+    }
+    
+    workspace.ServerStuff.applyGore:FireServer(unpack(args))
+        local args = {
+        [1] = "immolate_ability",
+        [2] = game:GetService("Players").LocalPlayer.Character,
+        [3] = game:GetService("Players").LocalPlayer,
+        [4] = {
+            [1] = game:GetService("Players").LocalPlayer:GetMouse().Hit
+        }
+    }
+    
+    workspace.ServerStuff.applyGore:FireServer(unpack(args))
+    wait(0.5) 
+    
+workspace.ServerStuff.changeStats:InvokeServer("changeclass", perk)
+        end
+        end)
+end
+    if msg == "/e fire explode all enemies" then
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+    
+        
+for i, v in pairs(game.Workspace.activeHostiles:GetChildren()) do
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)            }
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+local ohString1 = "shotshell"
+local ohTable2 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.dealDamage:FireServer(ohString1, ohTable2)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "shotshell_blast"
+local ohInstance2 = game.Players.LocalPlayer.Character
+local ohInstance3 = game:GetService("Players").LocalPlayer
+local ohTable4 = {
+    [1] = v.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+}
+
+workspace.ServerStuff.applyGore:FireServer(ohString1, ohInstance2, ohInstance3, ohTable4)
+local args = {
+[1] = "immolate_ability",
+[2] = game:GetService("Players").LocalPlayer.Character,
+[3] = game:GetService("Players").LocalPlayer,
+[4] = {
+    [1] = v.HumanoidRootPart.CFrame
+}
+}
+
+workspace.ServerStuff.applyGore:FireServer(unpack(args))
+local args = {
+[1] = "immolate_ability",
+[2] = game:GetService("Players").LocalPlayer.Character,
+[3] = game:GetService("Players").LocalPlayer,
+[4] = {
+    [1] = v.HumanoidRootPart.CFrame
+}
+}
+
+workspace.ServerStuff.applyGore:FireServer(unpack(args))
+local args = {
+[1] = "immolate_ability",
+[2] = game:GetService("Players").LocalPlayer.Character,
+[3] = game:GetService("Players").LocalPlayer,
+[4] = {
+    [1] = v.HumanoidRootPart.CFrame
+}
+}
+
+workspace.ServerStuff.applyGore:FireServer(unpack(args))
+local args = {
+[1] = "immolate_ability",
+[2] = game:GetService("Players").LocalPlayer.Character,
+[3] = game:GetService("Players").LocalPlayer,
+[4] = {
+    [1] = v.HumanoidRootPart.CFrame
+}
+}
+
+workspace.ServerStuff.applyGore:FireServer(unpack(args))
+    end
+end
+    if msg == "/e respawn enemy" then
+        function Respawn()
+            workspace.ServerStuff.spawnPlayer:FireServer("respawncharacter")
+        end 
+        
+        function Hub()
+            workspace.ServerStuff.spawnPlayer:FireServer("hubbing")
+        end
+        
+        function Start(arg)
+            if arg == "Normal" then
+                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
+            elseif arg == "Ray" then
+                game.Players.LocalPlayer:FindFirstChild("start").Value = "normal"
+            end
+        end
+        
+        function Spawn(Cords)
+            Respawn()
+            repeat task.wait() until not game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
+            Hub()
+            Start("Normal")
+            repeat task.wait() until game.Players.LocalPlayer.Character:FindFirstChild("Outfit")
+            if Cords == "Match" then
+                game.Players.LocalPlayer.start.Value = "normal"
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(18.777990341186523, -2.5860984325408936, -9.264251708984375)
+            elseif Cords == "HubA" then
+                game.Players.LocalPlayer.start.Value = "hubbing"
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
+            elseif Cords == "Respawn" then
+                game.Players.LocalPlayer.start.Value = "hubbing"
+                Respawn()
+            elseif Cords == "HubB" then
+                game.Players.LocalPlayer.start.Value = ""
+                game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame = CFrame.new(-118.72508239746094, -22.03114128112793, 1088.935546875)
+            end
+        end
+        
+        Spawn("Match")
+    end
+    if msg == "/e godly sickler" then
+        local perks = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"].basestats
+        local perk = require(workspace.ServerStuff.Statistics["CLASS_STATISTICS"])["shotgun"]
+        if perks then
+            perk.name = "Godly Sickler"
+            perk.desc = "KILL THEM ALL"
+            perk.pros = { "RAGE"}
+            perk.cons = { "None"}
+           perk.activename = "This thing wipes out squads. - Argent"
+           perk.activedetails = "DEADLY Perk"
+           perk.icon = "www.rbxassetid://7590913205"
+            perks.atkmod = 2500
+            perks.defmod = 2500
+            perks.stammod = 99900
+            perks.shovemod = 120
+            perks.lightatkspeed = 300
+             perks.heavyatkspeed = 400
+             perks.recoilmod = 100000
+             perks.accmod = 250
+             perks.reloadmod = 500
+             perks.noaimmod = false 
+             perks.scavmod = 100
+             perks.mvtmod = 200
+             perks.cripple_immune =  true
+             perks.exhaust_immune = true 
+             perks.burnimmune = true 
+             perks.nomorale = true
+             perks.backpack = true
+             perks.falldamagemod = false
+             perks.grap = false 
+             perks.bleed_immune = true
+             perk.activestats.blast_damage = 300
+             perk.activestats.blast_forward = 200 --How far the normal shot can go
+            perk.activestats.blast_knockback = 40 --Knockback, can send you flying if you are on air
+            perk.activestats.blast_punch_window = 0.3 --Default is 0.1, will also delay the normal shot if you miss the long one
+            perk.activestats.blast_punch_range = 500 --How far can your long shot go
+            perk.activestats.cooldown = 1
+            workspace.ServerStuff.changeStats:InvokeServer("changeclass", "shotgun")
+        end
+    end
+    if msg == "/e restart ui" then
+       startUI()
+    end
+    if msg == "/e spectate mode" then
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "changesetting"
+local ohString2 = "Spec"
+
+workspace.ServerStuff.changeStats:InvokeServer(ohString1, ohString2)
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+workspace.ServerStuff.retrieveStats:InvokeServer()
+    end
+end -- if statement
+end)
+ 
+    
+    
+    
+    
+    
