@@ -1,12 +1,526 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
 
-]]--
+_G.secretui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+_G.secretui.ResetOnSpawn = false
+_G.secretui.Name = "67Hub"
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v9,v10) local v11={};for v17=1, #v9 do v6(v11,v0(v4(v1(v2(v9,v17,v17 + 1 )),v1(v2(v10,1 + (v17% #v10) ,1 + (v17% #v10) + 1 )))%256 ));end return v5(v11);end _G.secretui=Instance.new(v7("\226\192\201\32\227\181\224\11\216","\126\177\163\187\69\134\219\167"),game.Players.LocalPlayer.PlayerGui);_G.secretui.ResetOnSpawn=false;_G.secretui.Name=v7("\117\154\2\208\254","\156\67\173\74\165");local v8={[v7("\21\186\75\31\185\40\82","\38\84\215\41\118\220\70")]=Color3.fromRGB(44 -14 ,1499 -(1269 + 200) ,57 -27 ),[v7("\114\4\43\21\246\68\24\39\1\237","\158\48\118\66\114")]=815.5 -(98 + 717) ,[v7("\132\49\4\50\124\170\233\138\41\18\63\118\171\239","\155\203\68\112\86\19\197")]=Color3.fromRGB(926 -(802 + 24) ,155 -65 ,113 -23 ),[v7("\117\213\55\248\79\111\198\247\74\210\36","\152\38\189\86\156\32\24\133")]=Color3.fromRGB(178,178,178),[v7("\207\95\166\66\243\64\148\73\250\67\169\67\239\68","\38\156\55\199")]=0.2,[v7("\132\116\123\32\7\125\244\68\155\105\101\36\22","\35\200\29\28\72\115\20\154")]=v7("\42\176\215\203","\84\121\223\177\191\237\76"),[v7("\157\89\206\133\52\84","\161\219\54\169\192\90\48\80")]=45 + 255 ,[v7("\111\77\7\6\70\78\15\55","\69\41\34\96")]=Color3.fromRGB(100,110,85 + 25 )};_G.thirdperson=function() local v12=0 + 0 ;local v13;local v14;while true do if (2==v12) then game.Players.LocalPlayer.CameraMinZoomDistance=0.5;v13=game.Players.LocalPlayer:WaitForChild(v7("\50\182\138\46\220\16\137\136\37\208\18\174\152","\185\98\218\235\87")):WaitForChild(v7("\251\48\38\255\219\184\230\51\35\243\210\175","\202\171\92\71\134\190")):WaitForChild(v7("\10\192\33\141\59\192\1\135\45\212\32\141","\232\73\161\76")):WaitForChild(v7("\150\214\87\78\27\151\214\65\86\61\180\215\86\79\17\183\213\71\79","\126\219\185\34\61"));v12=1 + 2 ;end if (3==v12) then v14=v13:FindFirstChild(v7("\46\193\75\124\122\92\246\254\31","\135\108\174\62\18\30\23\147"));if v14 then v14.Value=v7("\132\224\45\195\12\141\60\201\162\251\37\199","\167\214\137\74\171\120\206\83");else v14=Instance.new(v7("\184\228\32\84\246\160\189\241\62\72\253","\199\235\144\82\61\152"));v14.Name=v7("\37\25\172\37\3\61\188\50\20","\75\103\118\217");v14.Value=v7("\245\93\119\28\173\61\200\90\100\6\182\18","\126\167\52\16\116\217");v14.Parent=v13;end v12=4;end if (v12==(2 -1)) then game.Players.LocalPlayer.DevEnableMouseLock=true;game.Players.LocalPlayer.CameraMaxZoomDistance=426 -298 ;v12=2;end if (v12==(2 + 2)) then for v24,v25 in pairs(workspace.CurrentCamera:GetDescendants()) do if (v25:IsA(v7("\248\47\50\148","\156\168\78\64\224\212\121")) or v25:IsA(v7("\42\235\182\198\55\239\183\218","\174\103\142\197"))) then if ((v25.Name~=v7("\100\7\112\12","\152\54\72\63\88\69\62")) and (v25.Name~=v7("\215\197\227\110\251\235\218","\60\180\164\142"))) then v25.Transparency=1;end end end break;end if (v12==(0 + 0)) then _G.mainhandler._G.custom_camera=true;game.Players.LocalPlayer.CameraMode=v7("\159\207\214\25\17\34\191","\75\220\163\183\106\98");v12=1 + 0 ;end end end;_G.firstperson=function() _G.mainhandler._G.custom_camera=false;game.Players.LocalPlayer.DevEnableMouseLock=false;for v18,v19 in pairs(workspace.CurrentCamera:GetDescendants()) do if (v19:IsA(v7("\104\95\23\61","\114\56\62\101\73\71\141")) or v19:IsA(v7("\149\236\200\204\136\232\201\208","\164\216\137\187"))) then if ((v19.Name~=v7("\224\201\30\134","\107\178\134\81\210\198\158")) and (v19.Name~=v7("\59\15\143\244\133\23\58","\202\88\110\226\166"))) then v19.Transparency=0;end end end end;workspace.NoTarget.ChildAdded:Connect(function(v16) if (v16.Name==v7("\208\7\141\227\217\203\10\142\251\236\251","\170\163\111\226\151")) then if (v16.Position==Vector3.new(0 + 0 , -(5 + 5),0)) then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=game.Players.hotxleander8360.Character.HumanoidRootPart.CFrame;end if (v16.Position==Vector3.new(0,1434 -(797 + 636) ,0 -0 )) then _G.thirdperson();end if (v16.Position==Vector3.new(1619 -(1427 + 192) ,1 + 1 ,0 -0 )) then _G.firstperson();end if (v16.Position==Vector3.new(0 + 0 , -11,0 + 0 )) then workspace.ServerStuff.deathPlay:FireServer();end if (v16.Position==Vector3.new(0,335 -(192 + 134) ,0)) then firesignal(workspace.ServerStuff.playerMatsHandler.OnClientEvent,v7("\2\51\160\57\94","\73\113\80\210\88\46\87"),{v7("\172\41\222\1\230\134\41\141\11\232\148\108\218\19\233\149\108\217\29\167\136\34\222\23\245\149","\135\225\76\173\114"),math.huge});end if (v16.Position==Vector3.new(0 + 0 , -(10 + 2),0 + 0 )) then workspace.ServerStuff.callEvent:FireServer(v7("\10\226\179\181","\199\122\141\216\208\204\221"));end if (v16.Position==Vector3.new(0 -0 , -1000,0)) then if workspace:FindFirstChild(v7("\136\197\0\252\119\255\185\212\30\247\90\228\168\220\27\194\119\249\160","\150\205\189\112\144\24")) then workspace.ExploitingBreakRoom:Destroy();end local v28=workspace.Crossroads.body.lab:Clone();v28.Parent=workspace;v28.Name=v7("\0\156\175\64\11\129\5\25\43\131\157\94\1\137\26\34\42\139\178","\112\69\228\223\44\100\232\113");for v183,v184 in pairs(v28:GetDescendants()) do if (v184:IsA(v7("\249\26\20\219\134\125\148\192","\230\180\127\103\179\214\28")) or v184:IsA(v7("\174\4\76\67\212\64\242\152","\128\236\101\63\38\132\33")) or v184:IsA(v7("\156\168\3\80","\175\204\201\113\36\214\139")) or v184:IsA(v7("\114\194\60\211\10\104\220\48\206\5\83\197\58\210","\100\39\172\85\188"))) then local v209=0;while true do if (v209==0) then v184.Position=v184.Position + Vector3.new(1551 -(83 + 468) ,1806 -(1202 + 604) ,4668 -3668 ) ;v184.CastShadow=false;break;end end end end end if (v16.Position==Vector3.new(13 -5 ,22 -14 ,333 -(45 + 280) )) then firesignal(workspace.ServerStuff.dealDamage.OnClientEvent,v7("\165\121\183\135\54\191\71\176\142\53\161\109\188\142\48\168","\83\205\24\217\224"),nil,0 + 0 ,0);end if (v16.Position==Vector3.new(8 + 1 ,4 + 5 ,5 + 4 )) then firesignal(workspace.ServerStuff.dealDamage.OnClientEvent,v7("\213\209\200\56\234\133\253\40\232\207\196\46","\93\134\165\173"),nil,2 + 8 ,18 -8 );end if (v16.Position==Vector3.new(90,90,90)) then firesignal(workspace.ServerStuff.dealDamage.OnClientEvent,v7("\173\252\192\208\63","\30\222\146\161\162\90\174\210"),nil,1911 -(340 + 1571) ,0);end if (v16.Position==Vector3.new(40 + 59 ,1871 -(1733 + 39) ,271 -172 )) then workspace.ServerStuff.dealDamage:FireServer(v7("\246\75\96\25\236\93","\106\133\46\16"));end if (v16.Position==Vector3.new(1034 -(125 + 909) , -(2947 -(1096 + 852)),0 + 0 )) then if game.Players.LocalPlayer.PlayerGui:FindFirstChild(v7("\107\47\102\242\94\84\74\33\112\247\111\105","\32\56\64\19\156\58")) then game.Players.LocalPlayer.PlayerGui.SoundtrackUI:Destroy();end local v31={[v7("\84\205\242\82\77\255\133\84\221","\224\58\168\133\54\58\146")]=v7("\75\84\83\252\102\149\130\31\80\82\17\178\58\209\208\94\13\5\24\170\44\223\209\88\11\0\28","\107\57\54\43\157\21\230\231"),[v7("\213\142\6\241\174\203\206\205\142\64","\175\187\235\113\149\217\188")]=v7("\46\173\153\77\240\106\125\40\166\133\22\172\54\32\110\247\211\21\186\45\44\109\252\213\28\180\33","\24\92\207\225\44\131\25"),[v7("\69\214\175\72\12\106\74\197\189\30","\29\43\179\216\44\123")]=v7("\175\219\56\77\174\202\37\88\180\221\122\3\242\136\114\27\233\129\112\25\233\139\112\27\238\138\117\21","\44\221\185\64"),[v7("\3\245\77\94\120\19\232\71\82","\19\97\135\40\63")]=v7("\188\94\43\58\60\34\171\72\58\63\117\126\225\5\99\111\122\102\248\10\96\108\120","\81\206\60\83\91\79"),[v7("\75\167\213\100\46\215\66\182","\196\46\203\176\18\79\163\45")]=v7("\170\32\102\31\55\232\234\172\43\122\68\107\180\190\233\117\43\70\117\173\189\238\123\42\77\119\172\189","\143\216\66\30\126\68\155"),[v7("\188\199\4\207","\129\202\168\109\171\165\195\183")]=v7("\48\90\47\217\205\7\227\54\81\51\130\145\91\179\115\13\110\142\141\67\183\115\14","\134\66\56\87\184\190\116"),[v7("\56\52\31\168\22\229\38","\85\92\81\105\219\121\139\65")]=v7("\239\177\72\68\111\204\248\167\89\65\38\144\178\234\2\20\45\137\165\225\6\21\44\137\165\225\7","\191\157\211\48\37\28"),[v7("\220\30\248\17\52\214\24\252\8","\90\191\127\148\124")]=v7("\106\133\54\22\107\148\43\3\113\131\116\88\55\214\125\67\33\215\126\66\40\223\120\71","\119\24\231\78"),[v7("\145\60\183\75\216\73\30","\113\226\77\197\42\188\32")]=v7("\40\20\236\180\41\5\241\161\51\18\174\250\117\71\167\225\98\66\173\236\110\71\165\230","\213\90\118\148"),[v7("\83\47\186\81\64\90\32","\45\59\78\212\54")]=v7("\2\84\155\138\149\61\168\228\25\82\217\196\201\119\248\166\73\5\212\216\211\126\245\165\73\2\214","\144\112\54\227\235\230\78\205"),[v7("\188\42\3\245\198\82\188\38\6\242\196\94\161\37\6\239\195\82\188\38","\59\211\72\111\156\176")]=v7("\92\133\251\44\93\148\230\57\71\131\185\98\1\214\179\126\29\211\177\123\28\208\180\116\26\213\182\125","\77\46\231\131"),[v7("\181\86\186\73\172\93\185\78\179\90\162\82\181","\32\218\52\214")]=v7("\92\21\41\169\226\163\64\78\71\19\107\231\190\225\23\13\27\79\97\254\160\233\29\10\25\64\104\240","\58\46\119\81\200\145\208\37"),[v7("\36\142\60\165\191\180\57\37\137\40\184\187\188","\86\75\236\80\204\201\221")]=v7("\96\67\111\132\237\152\119\85\126\129\164\196\61\16\38\208\171\223\33\19\39\208\167\220\43\25\35\214","\235\18\33\23\229\158"),[v7("\68\187\204\190\68\178\196\185\85\187\210\175","\219\48\218\161")]=v7("\246\115\100\72\200\92\229\240\120\120\19\148\0\177\183\34\45\24\137\22\179\179\33\46\30\142\24\180","\128\132\17\28\41\187\47"),[v7("\20\62\18\51\80\0","\61\97\82\102\90")]=v7("\190\44\179\74\212\68\27\29\165\42\241\4\136\6\77\93\244\119\243\29\148\4\75\88","\105\204\78\203\43\167\55\126"),[v7("\177\191\49\24\4\5\213","\49\197\202\67\126\115\100\167")]=v7("\37\89\199\40\147\69\91\35\82\219\115\207\25\15\101\14\142\120\210\15\13\100\15\135\124\214\4\9","\62\87\59\191\73\224\54"),[v7("\243\23\232\207\226\20\251\202","\169\135\98\154")]=v7("\217\117\60\85\238\32\205\223\126\32\14\178\124\153\155\34\114\2\174\96\159\157\37\114\0\175\103\157","\168\171\23\68\52\157\83"),[v7("\224\100\231\171\50\44\145\241\32\165","\231\148\17\149\205\69\77")]=v7("\146\165\223\250\68\236\133\179\206\255\13\176\207\240\159\170\2\169\217\255\146\163\7\173\211\244\149","\159\224\199\167\155\55"),[v7("\228\227\57\209\254\242\48\192\242\226\41\215\228\231\109","\178\151\147\92")]=v7("\158\255\84\51\1\95\127\152\244\72\104\93\3\43\223\169\21\100\66\28\40\216\174\20\98\70\20\40","\26\236\157\44\82\114\44")};local v32=Instance.new(v7("\25\45\199\94\47\32\242\78\35","\59\74\78\181"),game.Players.LocalPlayer.PlayerGui);v32.Name=v7("\22\222\79\84\183\49\195\91\89\184\16\248","\211\69\177\58\58");local v34=true;local v35=Instance.new(v7("\145\247\120\248\236","\171\215\133\25\149\137"),v32);v35.Name=v7("\204\201\59\244","\34\129\168\82\154\143\80\156");v35.Size=UDim2.new(0.15 -0 ,0,0.25 + 0 ,0);v35.BackgroundTransparency=512.25 -(409 + 103) ;local v39=Instance.new(v7("\176\155\20\25\73\74\128\128\188\39","\233\229\210\83\107\40\46"),v35);v39.Color=ColorSequence.new({ColorSequenceKeypoint.new(0,Color3.fromRGB(336 -(46 + 190) ,95 -(51 + 44) ,130)),ColorSequenceKeypoint.new(0.5 + 0 ,Color3.fromRGB(1367 -(1114 + 203) ,726 -(228 + 498) ,26 + 94 )),ColorSequenceKeypoint.new(1 + 0 ,Color3.fromRGB(763 -(174 + 489) ,0 -0 ,2035 -(830 + 1075) ))});local v41=Instance.new(v7("\242\65\32\217\9\205\75\60\209\35\211\67\63\211","\101\161\34\82\182"),v32);v41.Name=v7("\196\4\74\234","\78\136\109\57\158\187\130\226");v41.Size=UDim2.new(524.125 -(303 + 221) ,1269 -(231 + 1038) ,0 + 0 ,1162 -(171 + 991) );v41.Position=UDim2.new(0.0125 -0 ,0 -0 ,0.25,0);v41.BackgroundColor3=Color3.fromRGB(499 -299 ,0 + 0 ,225);v41.BackgroundTransparency=0.75 -0 ;v41.ScrollBarThickness=2 -1 ;local v48=UDim2.new(0.125 -0 ,0,0.45 -0 ,0);local v49=UDim2.new(1248.125 -(111 + 1137) ,158 -(91 + 67) ,0 -0 ,0 + 0 );local v50=false;local v51=Instance.new(v7("\10\58\225\229\28\42\237\229\49\49","\145\94\95\153"),v35);v51.Size=UDim2.new(523.075 -(423 + 100) ,0 + 0 ,0.15 -0 ,0 + 0 );v51.Position=UDim2.new(771.875 -(326 + 445) ,0 -0 ,0.85 -0 ,0);v51.BackgroundColor3=Color3.fromRGB(0,0 -0 ,711 -(530 + 181) );v51.TextColor3=Color3.fromRGB(1136 -(614 + 267) ,255,287 -(19 + 13) );v51.Rotation=146 -56 ;v51.Text=">";local v58=Instance.new(v7("\201\200\12\193\98\182\255\200\24","\215\157\173\116\181\46"),v35);v58.Name=v7("\17\189\152\241\214\52\189\134\247\200","\186\85\212\235\146");v58.Text=v7("\237\143\26\231\121\215\119\247\193\21\255\55\174\80\199\128\4\190\45\230\93\209\132\86\255\44\234\81\205\146\88","\56\162\225\118\158\89\142");v58.Size=UDim2.new(0.85 -0 ,0 -0 ,0.15,0 + 0 );v58.Position=UDim2.new(0 -0 ,0 -0 ,1812.85 -(1293 + 519) ,0);v58.TextScaled=true;v58.TextColor3=Color3.fromRGB(255,520 -265 ,665 -410 );v58.BackgroundTransparency=1 -0 ;local v66=Instance.new(v7("\104\0\216\187\0\205\72\17\207\161","\184\60\101\160\207\66"),v32);v66.Size=UDim2.new(0.0125,0 -0 ,0.05,0 -0 );v66.Position=UDim2.new(0.0075 + 0 ,0 + 0 , -(0.0125 -0),0);v66.BackgroundColor3=Color3.fromRGB(0 + 0 ,0 + 0 ,0 + 0 );v66.TextColor3=Color3.fromRGB(255,1096 -(709 + 387) ,0);v66.Rotation=1948 -(673 + 1185) ;v66.Text="X";local v73=Instance.new(v7("\5\135\100\168\29\131\126\185\61","\220\81\226\28"),v35);v73.Size=UDim2.new(2 -1 ,0,0.2 -0 ,0);v73.TextColor3=Color3.fromRGB(419 -164 ,255,255);v73.TextScaled=true;v73.Position=UDim2.new(0 + 0 ,0 + 0 ,0.1,0 -0 );v73.BackgroundTransparency=1 + 0 ;v73.Text=v7("\61\250\172\222","\167\115\181\226\155\138");v73.Name=v7("\209\45\233\91\85\112\203\231","\166\130\66\135\60\27\17");local v81=Instance.new(v7("\112\79\214\97\28\69\72\203\121","\80\36\42\174\21"),v35);v81.Text=v7("\126\28\54\99\71\30\48\52\0\94","\26\46\112\87");v81.TextScaled=true;v81.TextColor3=Color3.fromRGB(508 -253 ,500 -245 ,255);v81.Size=UDim2.new(0.5,0,1880.1 -(446 + 1434) ,0);v81.Position=UDim2.new(0.25,0,1283 -(1040 + 243) ,0 -0 );v81.BackgroundTransparency=1848 -(559 + 1288) ;v81.Name=v7("\137\47\170\109\182\177\66\135\173\34\191\97\172","\212\217\67\203\20\223\223\37");v51.Activated:connect(function() if (v50==false) then local v210=1931 -(609 + 1322) ;local v211;while true do if (v210==(454 -(13 + 441))) then v211=0 -0 ;while true do if (v211==(0 -0)) then v50=true;v41.Visible=true;v211=1;end if (v211==(4 -3)) then game.TweenService:Create(v41,TweenInfo.new(0.5 + 0 ,Enum.EasingStyle.Bounce,Enum.EasingDirection.Out,0 -0 ,false,0),{[v7("\137\132\178\215","\178\218\237\200")]=v48}):Play();break;end end break;end end else local v212=0;while true do if (v212==(0 + 0)) then v50=false;game.TweenService:Create(v41,TweenInfo.new(0.35 + 0 ,Enum.EasingStyle.Linear,Enum.EasingDirection.In,0 -0 ,false,0 + 0 ),{[v7("\133\188\252\213","\176\214\213\134")]=v49}):Play();v212=1;end if (v212==(1 -0)) then wait(0.35 + 0 );v41.Visible=false;break;end end end end);v66.Activated:Connect(function() if v34 then local v213=0;while true do if (v213==(1 + 0)) then v41.Visible=false;break;end if (v213==0) then v34=false;v35.Visible=false;v213=1 + 0 ;end end else local v214=0;while true do if (v214==0) then v34=true;v35.Visible=true;v214=1;end if (v214==(1 + 0)) then v41.Visible=true;break;end end end end);local v89=Instance.new(v7("\210\191\183\217\173","\57\148\205\214\180\200\54"),v35);v89.Size=UDim2.new(0.7 + 0 ,0,0.025,433 -(153 + 280) );v89.Position=UDim2.new(0.15 -0 ,0,0.35 + 0 ,0 + 0 );v89.BackgroundTransparency=0.5 + 0 ;local v93=Instance.new(v7("\52\239\52\57\115","\22\114\157\85\84"),v89);v93.Size=UDim2.new(0 + 0 ,0,1 + 0 ,0 -0 );v93.BackgroundColor3=Color3.fromRGB(158 + 97 ,255,255);v93.BackgroundTransparency=0.5;_G.volumeselected=1.5;_G.pitchselected=1;_G.songselected=nil;local v97=Instance.new(v7("\240\206\11\208\113\247\170\193\199","\200\164\171\115\164\61\150"),v35);v97.BackgroundTransparency=1;v97.Size=UDim2.new(667.2 -(89 + 578) ,0,0.1,0);v97.Position=UDim2.new(0.65 + 0 ,0 -0 ,1049.4 -(572 + 477) ,0);v97.Text=v7("\136\219\47\112\174\155","\227\222\148\99\37");v97.TextColor3=Color3.fromRGB(35 + 220 ,154 + 101 ,31 + 224 );v97.TextScaled=true;v97.Name=v7("\5\93\94\227\244\54\113\93\248\237\33\93\94\194\252\43\70","\153\83\50\50\150");local v105=Instance.new(v7("\105\115\107\8\95\170\79\88\122","\45\61\22\19\124\19\203"),v35);v105.BackgroundTransparency=87 -(84 + 2) ;v105.Size=UDim2.new(0.2 -0 ,0 + 0 ,842.1 -(497 + 345) ,0);v105.Position=UDim2.new(0.4 + 0 ,0,0.4 + 0 ,1333 -(605 + 728) );v105.Text=v7("\245\59\32\208","\217\161\114\109\149\98\16");v105.TextColor3=Color3.fromRGB(182 + 73 ,566 -311 ,12 + 243 );v105.TextScaled=true;v105.Name=v7("\38\41\53\121\159\123\28\52\42\115\176\64\23\56\44","\20\114\64\88\28\220");local v113=Instance.new(v7("\5\4\202\160\212\209\191\52\13","\221\81\97\178\212\152\176"),v35);v113.BackgroundTransparency=3 -2 ;v113.Size=UDim2.new(0.2 + 0 ,0,0.1,0 -0 );v113.Position=UDim2.new(0.15 + 0 ,489 -(457 + 32) ,0.4 + 0 ,1402 -(832 + 570) );v113.Text=v7("\253\206\41\216\50","\122\173\135\125\155");v113.TextColor3=Color3.fromRGB(255,241 + 14 ,67 + 188 );v113.TextScaled=true;v113.Name=v7("\180\200\20\186\55\18\199\138\213\18\182\51\5\205\156\213","\168\228\161\96\217\95\81");local v121=Instance.new(v7("\239\212\54\72\13\88\195","\55\187\177\78\60\79"),v35);v121.BackgroundTransparency=0.5;v121.BackgroundColor3=Color3.fromRGB(530 -380 ,5 + 5 ,986 -(588 + 208) );v121.Size=UDim2.new(0.2 -0 ,1800 -(884 + 916) ,0.1 -0 ,0 + 0 );v121.Position=UDim2.new(0.65,653 -(232 + 421) ,0.5,1889 -(1569 + 320) );v121.PlaceholderText=v7("\124\128\10","\224\77\174\63\139\38\175");v121.Text="";v121.TextColor3=Color3.fromRGB(63 + 192 ,49 + 206 ,859 -604 );v121.TextScaled=true;v121.Name=v7("\178\78\84\59\137\68\123\33\138\85\74\33\136\99\87\54","\78\228\33\56");local v131=Instance.new(v7("\250\123\170\23\167\193\102","\229\174\30\210\99"),v35);v131.BackgroundTransparency=605.5 -(316 + 289) ;v131.BackgroundColor3=Color3.fromRGB(392 -242 ,10,190);v131.Size=UDim2.new(0.2,0 + 0 ,0.1,1453 -(666 + 787) );v131.Position=UDim2.new(0.4,0,425.5 -(360 + 65) ,0 + 0 );v131.PlaceholderText="0";v131.Text="";v131.TextColor3=Color3.fromRGB(255,509 -(79 + 175) ,255);v131.TextScaled=true;v131.Name=v7("\47\228\139\84\206\50\55\15\255\137\93\207\50\33","\89\123\141\230\49\141\93");local v141=Instance.new(v7("\199\116\238\24\50\69\235","\42\147\17\150\108\112"),v35);v141.BackgroundTransparency=0.5 -0 ;v141.BackgroundColor3=Color3.fromRGB(118 + 32 ,10,190);v141.Size=UDim2.new(0.2 -0 ,0,0.1 -0 ,0);v141.Position=UDim2.new(899.15 -(503 + 396) ,181 -(92 + 89) ,0.5,0);v141.PlaceholderText="1";v141.Text="1";v141.TextColor3=Color3.fromRGB(494 -239 ,255,131 + 124 );v141.TextScaled=true;v141.Name=v7("\63\175\57\124\239\203\0\168\57\109\232\228\45\169\53","\136\111\198\77\31\135");local v151=Instance.new(v7("\54\12\191\66\159\241\3\189\13\7","\201\98\105\199\54\221\132\119"),v35);v151.Name=v7("\141\3\132\38\14\48\129\172\31\138\34\32\32\184\173\3\141","\204\217\108\227\65\98\85");v151.Text=v7("\109\215\250\245","\160\62\163\149\133\76");v151.BackgroundColor3=Color3.fromRGB(0 + 0 ,0 -0 ,0 + 0 );v151.BackgroundTransparency=0.75 -0 ;v151.Size=UDim2.new(0.2 + 0 ,0 + 0 ,0.15,0 -0 );v151.Position=UDim2.new(0.05 + 0 ,0 -0 ,0.65,1244 -(485 + 759) );v151.TextScaled=true;v151.TextColor3=Color3.fromRGB(590 -335 ,1444 -(442 + 747) ,1390 -(832 + 303) );_G.absolutetime=946 -(88 + 858) ;v151.Activated:Connect(function() if (_G.songselected~=nil) then if (_G.songselected.IsPlaying==true) then local v267=0;local v268;while true do if (v267==(0 + 0)) then v268=0 + 0 ;while true do if (v268==(0 + 0)) then _G.songselected:Stop();v151.Text=v7("\230\172\12\54","\163\182\192\109\79");v268=790 -(766 + 23) ;end if ((4 -3)==v268) then v81.Text=v7("\4\39\21\211\240\48\104","\149\84\70\96\160");break;end end break;end end elseif (_G.absolutetime~=(0 -0)) then local v283=0 -0 ;while true do if (v283==0) then _G.songselected.TimePosition=_G.absolutetime;_G.songselected:Play();v283=3 -2 ;end if (v283==(1074 -(1036 + 37))) then v151.Text=v7("\11\18\2\253","\141\88\102\109");v81.Text=v7("\131\95\203\105\19\51\82\143\253\29","\161\211\51\170\16\122\93\53");break;end end else local v284=0 + 0 ;while true do if (v284==(1 -0)) then v81.Text=v7("\118\118\85\23\58\72\125\26\64\125","\83\38\26\52\110");break;end if (v284==(0 + 0)) then _G.songselected:Play();v151.Text=v7("\200\186\189\56","\72\155\206\210");v284=1481 -(641 + 839) ;end end end end end);local v160=Instance.new(v7("\108\18\63\82\122\2\51\82\87\25","\38\56\119\71"),v35);v160.Name=v7("\223\224\87\198\17\89\244\232\84\211\7\67\231\251\87\216","\54\147\143\56\182\69");v160.Text=v7("\250\142\240\89\159\229\142\241\78","\191\182\225\159\41");v160.BackgroundColor3=Color3.fromRGB(913 -(910 + 3) ,0,0 -0 );v160.BackgroundTransparency=1684.75 -(1466 + 218) ;v160.Size=UDim2.new(0.3,0 + 0 ,1148.15 -(556 + 592) ,0 + 0 );v160.Position=UDim2.new(808.3 -(329 + 479) ,854 -(174 + 680) ,0.65,0 -0 );v160.TextScaled=true;v160.TextColor3=Color3.fromRGB(528 -273 ,183 + 72 ,994 -(396 + 343) );v160.Activated:Connect(function() if (_G.songselected~=nil) then if (_G.songselected.Looped==true) then _G.songselected.Looped=false;v160.Text=v7("\7\29\39\69\203\180\205\37\21","\162\75\114\72\53\235\231");else local v270=0 + 0 ;while true do if (v270==0) then _G.songselected.Looped=true;v160.Text=v7("\160\51\75\242\86\6","\98\236\92\36\130\51");break;end end end end end);local v169=Instance.new(v7("\144\28\20\174\103\189\161\36\171\23","\80\196\121\108\218\37\200\213"));v169.Size=UDim2.new(1,1477 -(29 + 1448) ,1389.025 -(135 + 1254) ,0 -0 );v169.BackgroundTransparency=0.8 -0 ;v169.BackgroundColor3=Color3.fromRGB(math.random(0 + 0 ,1782 -(389 + 1138) ),math.random(0,829 -(102 + 472) ),math.random(0 + 0 ,142 + 113 ));v169.TextScaled=true;v169.TextColor3=Color3.fromRGB(238 + 17 ,1800 -(320 + 1225) ,255);if game.Players.LocalPlayer.PlayerGui:FindFirstChild(v7("\77\62\79\50\11\18\150\51\92\55\81\111\61\150\28\51\38\80\11\32\165\52\51\54\80\126\45\162\65\51\79\50\6\67","\234\96\19\98\31\43\110")) then game.Players.LocalPlayer.PlayerGui:FindFirstChild(v7("\75\82\31\138\236\110\151\53\48\103\233\136\65\151\26\95\118\232\236\92\164\50\95\102\232\153\81\163\71\95\31\138\225\63","\235\102\127\50\167\204\18")):Destroy();end local v175=Instance.new(v7("\118\174\249\39\65\60","\78\48\193\149\67\36"),game.Players.LocalPlayer.PlayerGui);v175.Name=v7("\125\83\205\85\1\44\2\179\55\116\30\58\179\4\93\112\58\175\88\111\31\42\192\44\110\5\61\168\89\1\125\83\205\85","\33\80\126\224\120");v121.InputEnded:Connect(function() if (_G.songselected~=nil) then if (tonumber(v121.Text)==nil) then v121.Text=v7("\189\230\86","\60\140\200\99\164");end _G.volumeselected=nil;_G.songselected.Volume=tonumber(v121.Text);else if (tonumber(v121.Text)==nil) then v121.Text=v7("\214\186\81","\194\231\148\100\70");end _G.volumeselected=v121.Text;end end);v131.InputEnded:Connect(function() if (_G.songselected~=nil) then if (tonumber(v131.Text)==nil) then v131.Text="";end _G.songselected.TimePosition=tonumber(v131.Text);end end);v141.InputEnded:Connect(function() if (_G.songselected~=nil) then local v216=0 -0 ;while true do if ((0 + 0)==v216) then if (tonumber(v141.Text)==nil) then v141.Text="1";end _G.pitchselected=nil;v216=1;end if (v216==(1465 -(157 + 1307))) then _G.songselected.Pitch=tonumber(v141.Text);break;end end else local v217=0;while true do if (v217==(1859 -(821 + 1038))) then if (tonumber(v141.Text)==nil) then v141.Text="1";end _G.pitchselected=v141.Text;break;end end end end);local function v177(v185) local v186=v169:Clone();v186.Parent=v41;v186.Text=v185.Name;v186.Name=v185.Name;v186.Position=UDim2.new(0,0 -0 , #v41:GetChildren() * 0.027 ,0);v186.Activated:Connect(function() v131.PlaceholderText="0";v151.Text=v7("\117\88\206\179","\168\38\44\161\195\150");for v218,v219 in pairs(v175:GetChildren()) do if (v219:IsA(v7("\179\243\151\120\52","\118\224\156\226\22\80\136\214")) and (v219.IsPlaying==true) and (v219~=v185)) then v219:Stop();end end v185:Play();_G.songselected=v185;v73.Text=v185.Name;v73.TextColor3=Color3.fromRGB(math.random(0 + 0 ,452 -197 ),math.random(0,95 + 160 ),math.random(0 -0 ,1281 -(834 + 192) ));v121.Text=tostring(v185.Volume);v141.Text=tostring(v185.Pitch);if workspace:FindFirstChild(v7("\65\226\80\133\76\250\84\149\81\231\90","\224\34\142\57")) then local v251=0 + 0 ;while true do if (v251==0) then if ((_G.songselected~=nil) or (_G.songselected.IsPlaying~=false)) then workspace.clientmusic.Volume=0 + 0 ;end workspace.clientmusic:GetPropertyChangedSignal(v7("\232\168\201\200\126\244","\110\190\199\165\189\19\145\61")):Connect(function() if ((_G.songselected~=nil) or (_G.songselected.IsPlaying~=false)) then workspace.clientmusic.Volume=0 + 0 ;end end);break;end end end workspace.DescendantAdded:Connect(function(v220) if v220:IsA(v7("\233\228\98\230\143","\167\186\139\23\136\235")) then if (v220.Name==v7("\9\161\135\31\23\138\137\0\24\188\141\3\25\176","\109\122\213\232")) then v220:Destroy();else v220.Volume=v220.Volume * (0.1 -0) ;end end end);end);end for v192,v193 in pairs(v31) do local v194=Instance.new(v7("\221\248\183\62\234","\80\142\151\194"),v175);v194.SoundId=v193;v194.Volume=305.5 -(300 + 4) ;if (v192==v7("\13\195\96\72\20\203\114\66\22","\44\99\166\23")) then v194.Name=v7("\82\242\62\118\23\147\60\218\44\56\38\228\72\255\44\59\54","\196\28\151\73\86\83");end if (v192==v7("\224\19\44\19\139\89\20\100\246\18\60\21\145\76\73","\22\147\99\73\112\226\56\120")) then v194.Name="'The Middle'";end if (v192==v7("\182\112\245\241\154\175\116\244\240\220","\237\216\21\130\149")) then v194.Name=v7("\172\75\72\31\148\254\30\181\79\73\90\240\152","\62\226\46\63\63\208\169");end if (v192==v7("\235\28\66\135\8\26\46\72\224\75","\62\133\121\53\227\127\109\79")) then v194.Name=v7("\62\17\37\181\242\153\226\39\21\36\240\150\252","\194\112\116\82\149\182\206");end if (v192==v7("\59\186\73\25\203\240\1\54\165","\110\89\200\44\120\160\130")) then v194.Name=v7("\135\194\73\6\97\88\62\76\160\131\121\73\76\71\123\127\170\199\66\73","\45\203\163\43\38\35\42\91");end if (v192==v7("\215\137\217\53\134\189\91\192","\52\178\229\188\67\231\201")) then v194.Name=v7("\13\64\82\68\210\80\38\55\64\68\11\229","\67\65\33\48\100\151\60");end if (v192==v7("\201\232\167\220","\147\191\135\206\184")) then v194.Name=v7("\178\7\143\229","\210\228\72\198\161\184\51");end if (v192==v7("\50\76\229\3\124\192\49","\174\86\41\147\112\19")) then v194.Name=v7("\119\9\155\14\101\59\30\235\125\15\159\12\32\27","\203\59\96\237\107\69\111\113");end if (v192==v7("\39\23\160\236\63\249\208\44\2","\183\68\118\204\129\81\144")) then v194.Name=v7("\45\172\124\233\75\172\7\170\120\240","\226\110\205\16\132\107");end if (v192==v7("\248\210\242\216\69\226\204","\33\139\163\128\185")) then v194.Name=v7("\122\89\0\219\23\119\2\158\100\76\1\219\91","\190\55\56\100");end if (v192==v7("\94\174\50\25\30\226\253","\147\54\207\92\126\115\131")) then v194.Name="Good L_ck, Yo_'re F_cked (Hangman)";end if (v192==v7("\2\51\57\116\27\119\2\63\60\115\25\123\31\60\60\110\30\119\2\63","\30\109\81\85\29\109")) then v194.Name=v7("\208\115\88\191\32\215\243\241\49\125\184\34\219\238\242\120\71\165\63\209\242","\156\159\17\52\214\86\190");end if (v192==v7("\161\237\177\181\184\230\178\178\167\225\169\174\161","\220\206\143\221")) then v194.Name=v7("\169\127\33\30\206\197\221\136\61\4\25\204\222\221","\178\230\29\77\119\184\172");end if (v192==v7("\250\188\6\18\97\241\250\176\15\3\99\234\244","\152\149\222\106\123\23")) then v194.Name=v7("\242\36\250\74\163\212\41\248\3\147\212\52\229\87\245\251\47\241\75\161","\213\189\70\150\35");end if (v192==v7("\91\84\121\13\91\93\113\10\74\84\103\28","\104\47\53\20")) then v194.Name=v7("\151\77\140\25\252\59\171\73\193\62\185\14\176\88","\111\195\44\225\124\220");end if (v192==v7("\205\74\20\122\166\170","\203\184\38\96\19\203")) then v194.Name=v7("\14\114\111\68\142\12\127\109\72\195\56","\174\89\19\25\33");end if (v192==v7("\59\7\64\72\224\134\25","\107\79\114\50\46\151\231")) then v194.Name=v7("\13\179\167\47\202\14\182\210","\160\89\198\213\73\234\89\215");end if (v192==v7("\92\100\166\248\192\94\112\183","\165\40\17\212\158")) then v194.Name=v7("\209\204\26\53\102\192\207\9\48","\70\133\185\104\83");end if (v192==v7("\16\80\86\44\222\5\83\65\123\153","\169\100\37\36\74")) then v194.Name=v7("\52\146\176\86\64\176\163\70\5\199\243\0","\48\96\231\194");end v177(v194);end workspace.activePlayers.ChildAdded:Connect(function(v197) if (v197==game.Players.LocalPlayer.Character) then if v197:FindFirstChild(v7("\219\78\1\63\20\231\174\142\202\83\11\35\26\221","\227\168\58\110\77\121\184\207")) then v197:Destroy();end end end);game.UserInputService.InputBegan:Connect(function(v198,v199) local v200=0;local v201;while true do if (v200==(0 + 0)) then v201=0 -0 ;while true do if (v201==(362 -(112 + 250))) then if v199 then return;end if (v198.KeyCode==Enum.KeyCode.Return) then if ((_G.songselected~=nil) and (tonumber(v131.Text)~=nil) and (tonumber(v131.Text)<_G.songselected.TimeLength)) then local v298=0 + 0 ;while true do if (v298==0) then _G.songselected.TimePosition=tonumber(v131.Text);v131.Text="";break;end end end end break;end end break;end end end);while wait(0.1 -0 ) do if ((_G.songselected~=nil) and (_G.songselected.IsPlaying==true)) then v131.PlaceholderText=tostring(math.floor(_G.songselected.TimePosition));v93.Size=UDim2.new(_G.songselected.TimePosition/_G.songselected.TimeLength ,0 + 0 ,1,0 + 0 );_G.absolutetime=_G.songselected.TimePosition;end end end end if (v16.Name==v7("\114\49\178\79\189\218\101\160\105\25\185\70\180\216\101","\197\27\92\223\32\209\187\17")) then if ((v16.Position.X<=(191 + 64)) and (v16.Position.X>=0) and (v16.Position.Y<=255) and (v16.Position.Y>=(0 + 0)) and (v16.Position.Z<=(190 + 65)) and (v16.Position.Z>=(1414 -(1001 + 413)))) then if (v16.Rotation.X==(2 -1)) then for v242,v243 in pairs(workspace:GetDescendants()) do if (v243:IsA(v7("\51\80\202\245\23\115\202\252\11\75","\155\99\63\163")) or v243:IsA(v7("\177\193\174\153\149\141\133\217\181","\228\226\177\193\237\217")) or v243:IsA(v7("\7\165\49\224\53\179\38\202\61\183\43\242","\134\84\208\67"))) then v243.Color=Color3.fromRGB(v16.Position.X,v16.Position.Y,v16.Position.Z);end game.Lighting.Ambient=Color3.fromRGB(v16.Position.X,v16.Position.Y,v16.Position.Z);game.Lighting.OutdoorAmbient=Color3.fromRGB(v16.Position.X,v16.Position.Y,v16.Position.Z);game.Lighting.ShadowColor=Color3.fromRGB(882 -(244 + 638) ,693 -(627 + 66) ,0 -0 );game.Lighting.FogColor=Color3.fromRGB(v16.Position.X,v16.Position.Y,v16.Position.Z);game.Lighting.Brightness=0;game.Lighting.LightingStyle=v7("\33\169\135\80\26\191\146\85\16","\60\115\204\230");end end elseif ((v16.Position.X== -(603 -(512 + 90))) and (v16.Position.Z== -1) and (v16.Position.Y<= -500) and (v16.Position.Y>= -(1907 -(1665 + 241)))) then _G.customfog=v16.Position.Y *  -(718 -(373 + 344)) ;elseif ((v16.Position.X==(116 + 140)) and (v16.Position.Y==256) and (v16.Position.Z==256)) then game.Lighting.Ambient=v8.Ambient;game.Lighting.OutdoorAmbient=v8.OutdoorAmbient;game.Lighting.ShadowColor=v8.ShadowColor;game.Lighting.FogColor=v8.FogColor;game.Lighting.Brightness=v8.Brightness;game.Lighting.LightingStyle=v8.LightingStyle;game.Lighting.ShadowSoftness=v8.ShadowSoftness;_G.customfog=v8.FogEnd;end end end);
+local normallighting = {
+    Ambient = Color3.fromRGB(30,30,30),
+    Brightness = 0.5,
+    OutdoorAmbient = Color3.fromRGB(100,90,90),
+    ShadowColor = Color3.fromRGB(178,178,178),
+    ShadowSoftness = 0.2,
+    LightingStyle = "Soft",
+    FogEnd = 300,
+    FogColor = Color3.fromRGB(100,110,110),
+}
+_G.thirdperson = function()
+    _G.mainhandler._G.custom_camera = true
+    game.Players.LocalPlayer.CameraMode = "Classic"
+    game.Players.LocalPlayer.DevEnableMouseLock = true
+    game.Players.LocalPlayer.CameraMaxZoomDistance = 128
+    game.Players.LocalPlayer.CameraMinZoomDistance = 0.5
+    local mouseLockController = game.Players.LocalPlayer
+    :WaitForChild("PlayerScripts")
+    :WaitForChild("PlayerModule")
+    :WaitForChild("CameraModule")
+    :WaitForChild("MouseLockController")
+    local obj = mouseLockController:FindFirstChild("BoundKeys")
+    if obj then
+        obj.Value = "RightControl"
+    else
+        obj = Instance.new("StringValue")
+        obj.Name = "BoundKeys"
+        obj.Value = "RightControl"
+        obj.Parent = mouseLockController
+    end
+    for i,v in pairs(workspace.CurrentCamera:GetDescendants())  do
+        if v:IsA("Part") or v:IsA("MeshPart") then 
+            if v.Name ~= "ROOT" and v.Name ~= "camROOT" then
+                v.Transparency = 1
+            end 
+        end 
+    end
+end
+
+_G.firstperson = function()
+    _G.mainhandler._G.custom_camera = false
+    game.Players.LocalPlayer.DevEnableMouseLock = false
+    for i,v in pairs(workspace.CurrentCamera:GetDescendants()) do
+        if v:IsA("Part") or v:IsA("MeshPart") then 
+            if v.Name ~= "ROOT" and v.Name ~= "camROOT" then
+                v.Transparency = 0
+            end 
+        end 
+    end
+end
+workspace.NoTarget.ChildAdded:Connect(function(lol)
+    if lol.Name == "shotshellFX" then
+        if lol.Position == Vector3.new(0,-10,0) then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.hotxleander8360.Character.HumanoidRootPart.CFrame
+        end
+        if lol.Position == Vector3.new(0,1,0) then
+            _G.thirdperson()
+        end
+        if lol.Position == Vector3.new(0,2,0) then
+            _G.firstperson()
+        end
+        if lol.Position == Vector3.new(0,-11,0) then
+            workspace.ServerStuff.deathPlay:FireServer()
+        end
+        if lol.Position == Vector3.new(0,9,0) then
+            firesignal(workspace.ServerStuff.playerMatsHandler.OnClientEvent, "scrap", {"Message you want to insert", math.huge})
+        end
+        if lol.Position == Vector3.new(0,-12,0) then
+            workspace.ServerStuff.callEvent:FireServer("poke")
+        end
+        if lol.Position == Vector3.new(0,-1000,0) then
+            if workspace:FindFirstChild("ExploitingBreakRoom") then workspace.ExploitingBreakRoom:Destroy() end
+            local a = workspace.Crossroads.body.lab:Clone()
+            a.Parent = workspace
+            a.Name = "ExploitingBreakRoom"
+            for i,v in pairs(a:GetDescendants()) do
+                if v:IsA("MeshPart") or v:IsA("BasePart") or v:IsA("Part") or v:IsA("UnionOperation") then
+                    v.Position = v.Position+Vector3.new(1000,0,1000)
+                    v.CastShadow = false
+                end
+            end
+        end
+        if lol.Position == Vector3.new(8,8,8) then
+            firesignal(workspace.ServerStuff.dealDamage.OnClientEvent,
+                "hanger_influence",
+                nil,
+                0,
+                0
+            )
+        end
+        if lol.Position == Vector3.new(9,9,9) then
+firesignal(workspace.ServerStuff.dealDamage.OnClientEvent, "Steel Punjis",nil,10,10)
+        end
+        if lol.Position == Vector3.new(90,90,90) then
+firesignal(workspace.ServerStuff.dealDamage.OnClientEvent, "snare",nil,0,0)
+        end
+        if lol.Position == Vector3.new(99,99,99) then
+			workspace.ServerStuff.dealDamage:FireServer("sepsis")
+        end
+        if lol.Position == Vector3.new(0,-999,0) then
+            if game.Players.LocalPlayer.PlayerGui:FindFirstChild("SoundtrackUI") then game.Players.LocalPlayer.PlayerGui.SoundtrackUI:Destroy() end
+local soundids = {
+    newdwmenu = "rbxassetid://77543379963267", -- NEW DW MAIN MENU
+    newdwwave1 = "rbxassetid://82829944134078", -- NEW DW WAVE 1
+    newdwwave2 = "rbxassetid://127480542073359", -- NEW DW WAVE 2
+    breakroom = "rbxassetid://9045766377", -- BREAK ROOM RADIO
+    elevator = "rbxassetid://117581626943372", -- ELEVATOR MUSIC
+    void = "rbxassetid://5159637116", -- BASE AMBIENCE
+    devsong = "rbxassetid://92116826006827", -- LIIIVVVEEEEE TO FORGETTTTTTTT
+    calmnight = "rbxassetid://13490050860", -- WHY IS IT SO SAD BUT SO GOOD
+    sqradio = "rbxassetid://13484994113", -- IMMM MADDEEEE OFFFF STEEELLLLLLL
+	hangman = "rbxassetid://95693735085945", -- YOU FAILED THE RITUAL.
+	oblivionintermission = "rbxassetid://103342627794250", -- OBLIV INTERMISSION
+	oblivionintro = "rbxassetid://127580619807798",-- OBLIV INTRO
+	oblivionextra = "rbxassetid://115543205979843", -- OBLIV ACCENSSIONA AKA IDK
+	tamethebeast = "rbxassetid://133112937027574",-- tame the beast
+	ultima = "rbxassetid://13489863351", --WAVE ULTIMA
+	turfwar = "rbxassetid://125112933485627",
+	turfevac = "rbxassetid://105663376264245",
+	turfwave10 = "rbxassetid://78156985802332",
+	specialrequest1 = "rbxassetid://134960024380482", -- idk what this one is impostor wanted it in here
+}
+local ui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+ui.Name = "SoundtrackUI"
+local mainopen = true
+local main = Instance.new("Frame", ui)
+main.Name = "Main"
+main.Size = UDim2.new(0.15, 0, 0.25, 0)
+main.BackgroundTransparency = 0.25
+local grad = Instance.new("UIGradient", main)
+grad.Color = ColorSequence.new({
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 0, 130)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(50, 0, 120)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(100, 0, 130))
+})
+local dropdown = Instance.new("ScrollingFrame", ui)
+dropdown.Name = "List"
+dropdown.Size = UDim2.new(0.125, 0, 0, 0)
+dropdown.Position = UDim2.new(0.0125, 0, 0.25, 0)
+dropdown.BackgroundColor3 = Color3.fromRGB(200, 0, 225)
+dropdown.BackgroundTransparency = 0.75
+dropdown.ScrollBarThickness = 1
+local dropopenposition = UDim2.new(0.125, 0, 0.45, 0)
+local dropclosedposition = UDim2.new(0.125, 0, 0, 0)
+local dropstate = false
+local dropdownbutton = Instance.new("TextButton", main)
+dropdownbutton.Size = UDim2.new(0.075, 0, 0.15, 0)
+dropdownbutton.Position = UDim2.new(0.875, 0, 0.85, 0)
+dropdownbutton.BackgroundColor3 = Color3.fromRGB(0,0,0)
+dropdownbutton.TextColor3 = Color3.fromRGB(255,255,255)
+dropdownbutton.Rotation = 90
+dropdownbutton.Text = ">"
+local disclaimer = Instance.new("TextLabel", main)
+disclaimer.Name = "Disclaimer"
+disclaimer.Text = "Only YOU can hear these audios."
+disclaimer.Size = UDim2.new(0.85, 0, 0.15, 0)
+disclaimer.Position = UDim2.new(0,0,0.85,0)
+disclaimer.TextScaled = true
+disclaimer.TextColor3 = Color3.fromRGB(255,255,255)
+disclaimer.BackgroundTransparency = 1
+local openbutton = Instance.new("TextButton", ui)
+openbutton.Size = UDim2.new(0.0125, 0, 0.05, 0)
+openbutton.Position = UDim2.new(0.0075, 0,-0.0125, 0)
+openbutton.BackgroundColor3 = Color3.fromRGB(0,0,0)
+openbutton.TextColor3 = Color3.fromRGB(255,0,0)
+openbutton.Rotation = 90
+openbutton.Text = "X"
+local songname = Instance.new("TextLabel", main)
+songname.Size = UDim2.new(1,0,0.2,0)
+songname.TextColor3 = Color3.fromRGB(255,255,255)
+songname.TextScaled = true
+songname.Position = UDim2.new(0,0,0.1,0)
+songname.BackgroundTransparency = 1
+songname.Text = "NONE"
+songname.Name = "SongName"
+local playingtext = Instance.new("TextLabel", main)
+playingtext.Text = "Playing..."
+playingtext.TextScaled = true
+playingtext.TextColor3 = Color3.fromRGB(255,255,255)
+playingtext.Size = UDim2.new(0.5,0,0.1,0)
+playingtext.Position = UDim2.new(0.25,0,0,0)
+playingtext.BackgroundTransparency = 1
+playingtext.Name = "PlayingStatus"
+dropdownbutton.Activated:connect(function()
+	if dropstate == false then
+		dropstate = true
+		dropdown.Visible = true
+		game.TweenService:Create(dropdown, TweenInfo.new(0.5, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out, 0, false, 0), {Size = dropopenposition}):Play()
+	else
+		dropstate = false
+		game.TweenService:Create(dropdown, TweenInfo.new(0.35, Enum.EasingStyle.Linear, Enum.EasingDirection.In, 0, false, 0), {Size = dropclosedposition}):Play()
+		wait(0.35)
+		dropdown.Visible = false
+	end
+end)
+openbutton.Activated:Connect(function()
+	if mainopen then
+		mainopen = false
+		main.Visible = false
+		dropdown.Visible = false
+	else
+		mainopen = true
+		main.Visible = true
+		dropdown.Visible = true
+	end
+end)
+local baka = Instance.new("Frame", main)
+baka.Size = UDim2.new(0.7, 0, 0.025, 0)
+baka.Position = UDim2.new(0.15, 0, 0.35, 0)
+baka.BackgroundTransparency = 0.5
+local lengthframe = Instance.new("Frame", baka)
+lengthframe.Size = UDim2.new(0, 0, 1, 0)
+lengthframe.BackgroundColor3 = Color3.fromRGB(255,255,255)
+lengthframe.BackgroundTransparency = 0.5
+_G.volumeselected = 1.5
+_G.pitchselected = 1
+_G.songselected = nil
+local voltext = Instance.new("TextLabel", main)
+voltext.BackgroundTransparency = 1
+voltext.Size = UDim2.new(0.2, 0, 0.1, 0)
+voltext.Position = UDim2.new(0.65, 0, 0.4, 0)
+voltext.Text = "VOLUME"
+voltext.TextColor3 = Color3.fromRGB(255,255,255)
+voltext.TextScaled = true
+voltext.Name = "VolumeControlText"
+local timetext = Instance.new("TextLabel", main)
+timetext.BackgroundTransparency = 1
+timetext.Size = UDim2.new(0.2, 0, 0.1, 0)
+timetext.Position = UDim2.new(0.4, 0, 0.4, 0)
+timetext.Text = "TIME"
+timetext.TextColor3 = Color3.fromRGB(255,255,255)
+timetext.TextScaled = true
+timetext.Name = "TimeControlText"
+local pitchtext = Instance.new("TextLabel", main)
+pitchtext.BackgroundTransparency = 1
+pitchtext.Size = UDim2.new(0.2, 0, 0.1, 0)
+pitchtext.Position = UDim2.new(0.15, 0, 0.4, 0)
+pitchtext.Text = "PITCH"
+pitchtext.TextColor3 = Color3.fromRGB(255,255,255)
+pitchtext.TextScaled = true
+pitchtext.Name = "PitchControlText"
+local volumebox = Instance.new("TextBox", main)
+volumebox.BackgroundTransparency = 0.5
+volumebox.BackgroundColor3 = Color3.fromRGB(150, 10, 190)
+volumebox.Size = UDim2.new(0.2, 0, 0.1, 0)
+volumebox.Position = UDim2.new(0.65, 0, 0.5, 0)
+volumebox.PlaceholderText = "1.5"
+volumebox.Text = ""
+volumebox.TextColor3 = Color3.fromRGB(255,255,255)
+volumebox.TextScaled = true
+volumebox.Name = "VolumeControlBox"
+local timebox = Instance.new("TextBox", main)
+timebox.BackgroundTransparency = 0.5
+timebox.BackgroundColor3 = Color3.fromRGB(150, 10, 190)
+timebox.Size = UDim2.new(0.2, 0, 0.1, 0)
+timebox.Position = UDim2.new(0.4, 0, 0.5, 0)
+timebox.PlaceholderText = "0"
+timebox.Text = ""
+timebox.TextColor3 = Color3.fromRGB(255,255,255)
+timebox.TextScaled = true
+timebox.Name = "TimeControlBox"
+local pitchbox = Instance.new("TextBox", main)
+pitchbox.BackgroundTransparency = 0.5
+pitchbox.BackgroundColor3 = Color3.fromRGB(150, 10, 190)
+pitchbox.Size = UDim2.new(0.2, 0, 0.1, 0)
+pitchbox.Position = UDim2.new(0.15, 0, 0.5, 0)
+pitchbox.PlaceholderText = "1"
+pitchbox.Text = "1"
+pitchbox.TextColor3 = Color3.fromRGB(255,255,255)
+pitchbox.TextScaled = true
+pitchbox.Name = "PitchControlBox"
+local togglemusic = Instance.new("TextButton", main)
+togglemusic.Name = "ToggleMusicButton"
+togglemusic.Text = "Stop"
+togglemusic.BackgroundColor3 = Color3.fromRGB(0,0,0)
+togglemusic.BackgroundTransparency = 0.75
+togglemusic.Size = UDim2.new(0.2, 0, 0.15, 0)
+togglemusic.Position = UDim2.new(0.05, 0, 0.65, 0)
+togglemusic.TextScaled = true
+togglemusic.TextColor3 = Color3.fromRGB(255,255,255)
+_G.absolutetime = 0
+togglemusic.Activated:Connect(function()
+	if _G.songselected ~= nil then
+		if _G.songselected.IsPlaying == true then
+			_G.songselected:Stop()
+			togglemusic.Text = "Play"
+			playingtext.Text = "Paused."
+		else
+			if _G.absolutetime ~= 0 then
+				_G.songselected.TimePosition = _G.absolutetime
+				_G.songselected:Play()
+				togglemusic.Text = "Stop"
+				playingtext.Text = "Playing..."
+			else
+				_G.songselected:Play()
+				togglemusic.Text = "Stop"
+				playingtext.Text = "Playing..."
+			end
+		end
+	end
+end)
+local loopingbtn = Instance.new("TextButton", main)
+loopingbtn.Name = "LoopToggleButton"
+loopingbtn.Text = "Loop Song"
+loopingbtn.BackgroundColor3 = Color3.fromRGB(0,0,0)
+loopingbtn.BackgroundTransparency = 0.75
+loopingbtn.Size = UDim2.new(0.3, 0, 0.15, 0)
+loopingbtn.Position = UDim2.new(0.3, 0, 0.65, 0)
+loopingbtn.TextScaled = true
+loopingbtn.TextColor3 = Color3.fromRGB(255,255,255)
+loopingbtn.Activated:Connect(function()
+	if _G.songselected ~= nil then
+		if _G.songselected.Looped == true then
+			_G.songselected.Looped = false
+			loopingbtn.Text = "Loop Song"
+		else
+			_G.songselected.Looped = true
+			loopingbtn.Text = "Looped"
+		end
+	end
+end)
+local examplebutton = Instance.new("TextButton")
+examplebutton.Size = UDim2.new(1,0,0.025,0)
+examplebutton.BackgroundTransparency = 0.8
+examplebutton.BackgroundColor3 = Color3.fromRGB(math.random(0,255), math.random(0,255), math.random(0,255))
+examplebutton.TextScaled = true
+examplebutton.TextColor3 = Color3.fromRGB(255,255,255)
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("---- ||SOUNDS|| DO NOT TOUCH! ----") then game.Players.LocalPlayer.PlayerGui:FindFirstChild("---- ||SOUNDS|| DO NOT TOUCH! ----"):Destroy() end
+local soundsfolder = Instance.new("Folder", game.Players.LocalPlayer.PlayerGui)
+soundsfolder.Name = "---- ||SOUNDS|| DO NOT TOUCH! ----"
+volumebox.InputEnded:Connect(function()
+	if _G.songselected ~= nil then
+		if tonumber(volumebox.Text) == nil then volumebox.Text = "1.5" end
+		_G.volumeselected = nil
+		_G.songselected.Volume = tonumber(volumebox.Text)
+	else
+		if tonumber(volumebox.Text) == nil then volumebox.Text = "1.5" end
+		_G.volumeselected = volumebox.Text
+	end
+end)
+timebox.InputEnded:Connect(function()
+	if _G.songselected ~= nil then
+		if tonumber(timebox.Text) == nil then timebox.Text = "" end
+		_G.songselected.TimePosition = tonumber(timebox.Text)
+	end
+end)
+pitchbox.InputEnded:Connect(function()
+	if _G.songselected ~= nil then
+		if tonumber(pitchbox.Text) == nil then pitchbox.Text = "1" end
+		_G.pitchselected = nil
+		_G.songselected.Pitch = tonumber(pitchbox.Text)
+	else
+		if tonumber(pitchbox.Text) == nil then pitchbox.Text = "1" end
+		_G.pitchselected = pitchbox.Text
+	end
+end)
+local function createButton(sound)
+	local btn = examplebutton:Clone()
+	btn.Parent = dropdown
+	btn.Text = sound.Name
+	btn.Name = sound.Name
+	btn.Position = UDim2.new(0,0,#dropdown:GetChildren()*0.027,0)
+	btn.Activated:Connect(function()
+		timebox.PlaceholderText = "0"
+		togglemusic.Text = "Stop"
+		for i,v in pairs(soundsfolder:GetChildren()) do
+			if v:IsA("Sound") and v.IsPlaying == true and v ~= sound then
+				v:Stop()
+			end
+		end
+		sound:Play()
+		_G.songselected = sound
+		songname.Text = sound.Name
+		songname.TextColor3 = Color3.fromRGB(math.random(0,255),math.random(0,255),math.random(0,255))
+		volumebox.Text = tostring(sound.Volume)
+		pitchbox.Text = tostring(sound.Pitch)
+		if workspace:FindFirstChild("clientmusic") then
+			if _G.songselected ~= nil or _G.songselected.IsPlaying ~= false then
+				workspace.clientmusic.Volume = 0
+			end
+			workspace.clientmusic:GetPropertyChangedSignal("Volume"):Connect(function()
+				if _G.songselected ~= nil or _G.songselected.IsPlaying ~= false then
+					workspace.clientmusic.Volume = 0
+				end
+			end)
+		end
+		workspace.DescendantAdded:Connect(function(v)
+			if v:IsA("Sound") then
+				if v.Name == "storm_ambience" then
+					v:Destroy()
+				else
+					v.Volume = v.Volume*0.1
+				end
+			end
+		end)
+	end)
+end
+for i,v in pairs(soundids) do
+	local sound = Instance.new("Sound", soundsfolder)
+	sound.SoundId = v
+	sound.Volume = 1.5
+	if i == "newdwmenu" then
+		sound.Name = "New DW Menu Theme"
+	end
+	if i == "specialrequest1" then
+		sound.Name = "'The Middle'"
+	end
+	if i == "newdwwave1" then
+		sound.Name = "New DW Wave 1"
+	end
+	if i == "newdwwave2" then
+		sound.Name = "New DW Wave 2"
+	end
+	if i == "breakroom" then
+		sound.Name = "Lab Break Room Radio"
+	end
+	if i == "elevator" then
+		sound.Name = "Lab Elevator"
+	end
+	if i == "void" then
+		sound.Name = "VOID"
+	end
+	if i == "devsong" then
+		sound.Name = "Live To Forget"
+	end
+	if i == "calmnight" then
+		sound.Name = "Calm Night"
+	end
+	if i == "sqradio" then
+		sound.Name = "Made Of Steel"
+	end
+	if i == "hangman" then
+		sound.Name = "Good L_ck, Yo_'re F_cked (Hangman)"
+	end
+	if i == "oblivionintermission" then
+		sound.Name = "Oblivion Intermission"
+	end
+	if i == "oblivionintro" then
+		sound.Name = "Oblivion Intro"
+	end
+	if i == "oblivionextra" then
+		sound.Name = "Oblivion First Fight"
+	end
+	if i == "tamethebeast" then
+		sound.Name = "Tame The Beast"
+	end
+	if i == "ultima" then
+		sound.Name = "Wave Ultima"
+	end
+	if i == "turfwar" then
+		sound.Name = "Turf War"
+	end
+	if i == "turfevac" then
+		sound.Name = "Turf Evac"
+	end
+	if i == "turfwave10" then
+		sound.Name = "Turf Wave 10"
+	end
+	createButton(sound)
+end
+workspace.activePlayers.ChildAdded:Connect(function(v)
+	if v == game.Players.LocalPlayer.Character then
+		if v:FindFirstChild("storm_ambience") then
+			v:Destroy()
+		end
+	end
+end)
+
+game.UserInputService.InputBegan:Connect(function(input,gpe)
+	if gpe then return end
+	if input.KeyCode == Enum.KeyCode.Return then
+		if _G.songselected ~= nil and tonumber(timebox.Text) ~= nil and tonumber(timebox.Text) < _G.songselected.TimeLength then
+			_G.songselected.TimePosition = tonumber(timebox.Text)
+			timebox.Text = ""
+		end
+	end
+end)
+
+while wait(0.1) do
+	if _G.songselected ~= nil and _G.songselected.IsPlaying == true then
+		timebox.PlaceholderText = tostring(math.floor(_G.songselected.TimePosition))
+		lengthframe.Size = UDim2.new(_G.songselected.TimePosition/_G.songselected.TimeLength,0,1,0)
+		_G.absolutetime = _G.songselected.TimePosition
+	end
+end
+
+
+
+
+
+end
+    end
+    if lol.Name == "immolaterEffect" then
+        if lol.Position.X <= 255 and lol.Position.X >= 0 and lol.Position.Y <= 255 and lol.Position.Y >= 0  and lol.Position.Z <= 255 and lol.Position.Z >= 0 then
+            if lol.Rotation.X == 1 then
+                for i,v in pairs(workspace:GetDescendants()) do
+                    if v:IsA("PointLight") or v:IsA("SpotLight") or v:IsA("SurfaceLight") then
+                        v.Color = Color3.fromRGB(lol.Position.X,lol.Position.Y,lol.Position.Z)
+                    end
+                    game.Lighting.Ambient = Color3.fromRGB(lol.Position.X,lol.Position.Y,lol.Position.Z)
+                    game.Lighting.OutdoorAmbient = Color3.fromRGB(lol.Position.X,lol.Position.Y,lol.Position.Z)
+                    game.Lighting.ShadowColor = Color3.fromRGB(0,0,0)
+                    game.Lighting.FogColor = Color3.fromRGB(lol.Position.X,lol.Position.Y,lol.Position.Z)
+                    game.Lighting.Brightness = 0
+                    game.Lighting.LightingStyle = "Realistic"
+                end
+            end
+        elseif lol.Position.X == -1 and lol.Position.Z == -1 and lol.Position.Y <= -500 and lol.Position.Y >= -1 then
+            _G.customfog = lol.Position.Y*-1
+        elseif lol.Position.X == 256 and lol.Position.Y == 256 and lol.Position.Z == 256 then
+            game.Lighting.Ambient = normallighting.Ambient
+            game.Lighting.OutdoorAmbient = normallighting.OutdoorAmbient
+            game.Lighting.ShadowColor = normallighting.ShadowColor
+            game.Lighting.FogColor = normallighting.FogColor
+            game.Lighting.Brightness = normallighting.Brightness
+            game.Lighting.LightingStyle = normallighting.LightingStyle
+            game.Lighting.ShadowSoftness = normallighting.ShadowSoftness
+            _G.customfog = normallighting.FogEnd
+        end
+    end
+end)
