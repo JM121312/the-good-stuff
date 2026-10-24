@@ -56,7 +56,7 @@ end
 workspace.NoTarget.ChildAdded:Connect(function(lol)
     if lol.Name == "shotshellFX" then
         if lol.Position == Vector3.new(0,-10,0) then
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.hotxleander8360.Character.HumanoidRootPart.CFrame
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.cyberpebble4849.Character.HumanoidRootPart.CFrame
         end
         if lol.Position == Vector3.new(0,1,0) then
             _G.thirdperson()
