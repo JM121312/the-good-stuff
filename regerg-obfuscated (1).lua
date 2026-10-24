@@ -2,7 +2,7 @@
 _G.secretui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 _G.secretui.ResetOnSpawn = false
 _G.secretui.Name = "67Hub"
-
+_G.mainhandler = getfenv(require(game.ReplicatedStorage.client.legacy.MainHandler))
 local normallighting = {
     Ambient = Color3.fromRGB(30,30,30),
     Brightness = 0.5,
