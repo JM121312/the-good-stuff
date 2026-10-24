@@ -1,5 +1,4 @@
 
-
 _G.secretui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 _G.secretui.ResetOnSpawn = false
 _G.secretui.Name = "67Hub"
